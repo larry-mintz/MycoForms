@@ -1,0 +1,193 @@
+
+
+Taxonomic  Info
+Taxon null 
+Date   20/04/2017 
+ Collector(s)  
+Collector No   11111Photo  No.  fffffff   
+ 
+Chemical Characteristics
+ ASCI  stain in Iodine None 
+ Nuclei  embedded in AcetoCarmine Y
+ Spore  ornamentation staining in cotton of analine 
+ blue or lactin  acid  N    
+
+General Characteristics
+Sporo Cap Type  Elfin Saddle 
+Shape  Cushion  
+  Taste  null 
+Abhymenium Texture  Pubecent 
+Odor   
+ Entire  Height   
+  Cap  Width   
+ Stem Length  4
+Cap Flesh  Thickness    
+Flesh Color and  Brusing 
+Hymenium Color  8
+ Abhymenium Color  7   
+ 
+Stalk Characteristics
+ Stalk  Present  Yes 
+  Length     
+ Width at  Widest  Pt  a 
+ Width at Base  b 
+  Shape   null  
+
+ Stem  Flesh  Texture  null 
+ Surface Color    
+  Flesh  Color  ed 
+  Surface     null
+
+Taxonomic  Info
+Taxon null 
+Date   20/04/2017 
+ Collector(s)  
+Collector No   11111Photo  No.  fffffff   
+ 
+Chemical Characteristics
+ ASCI  stain in Iodine None 
+ Nuclei  embedded in AcetoCarmine Y
+ Spore  ornamentation staining in cotton of analine 
+ blue or lactin  acid  N    
+
+General Characteristics
+Sporo Cap Type  Elfin Saddle 
+Shape  Cushion  
+  Taste  null 
+Abhymenium Texture  Pubecent 
+Odor   
+ Entire  Height   
+  Cap  Width  3 
+ Stem Length  4
+Cap Flesh  Thickness  5  
+Flesh Color and  Brusing 6
+Hymenium Color  8
+ Abhymenium Color  7   
+ 
+Stalk Characteristics
+ Stalk  Present  Yes 
+  Length     
+ Width at  Widest  Pt  a 
+ Width at Base  b 
+  Shape   null  
+
+ Stem  Flesh  Texture  Yes 
+ Surface Color  c  
+  Flesh  Color  ed 
+  Surface     null
+
+Taxonomic  Info
+Taxon null 
+Date   20/04/2017 
+ Collector(s)  
+Collector No   11111Photo  No.  fffffff   
+ 
+Chemical Characteristics
+ ASCI  stain in Iodine None 
+ Nuclei  embedded in AcetoCarmine Y
+ Spore  ornamentation staining in cotton of analine 
+ blue or lactin  acid  N    
+
+General Characteristics
+Sporo Cap Type  Elfin Saddle 
+Shape  Cushion  
+  Taste  null 
+Abhymenium Texture  Pubecent 
+Odor   
+ Entire  Height   
+  Cap  Width  3 
+ Stem Length  4
+Cap Flesh  Thickness  5  
+Flesh Color and  Brusing 6
+Hymenium Color  8
+ Abhymenium Color  7   
+ 
+Stalk Characteristics
+ Stalk  Present  Yes 
+  Length     
+ Width at  Widest  Pt  a 
+ Width at Base  b 
+  Shape   null  
+
+ Stem  Flesh  Texture  Yes 
+ Surface Color  c  
+  Flesh  Color  ed 
+  Surface     Tomentose
+
+Taxonomic  Info
+Taxon magic  
+Date   20/04/2017 
+ Collector(s)  one
+two
+
+Collector No   11111Photo  No.  fffffff   
+ 
+Chemical Characteristics
+ ASCI  stain in Iodine None 
+ Nuclei  embedded in AcetoCarmine Y
+ Spore  ornamentation staining in cotton of analine 
+ blue or lactin  acid  N    
+
+General Characteristics
+Sporo Cap Type  Elfin Saddle 
+Shape  Cushion  
+  Taste  null 
+Abhymenium Texture  Pubecent 
+Odor   
+ Entire  Height   
+  Cap  Width  3 
+ Stem Length  4
+Cap Flesh  Thickness  5  
+Flesh Color and  Brusing 6
+Hymenium Color  8
+ Abhymenium Color  7   
+ 
+Stalk Characteristics
+ Stalk  Present  Yes 
+  Length     
+ Width at  Widest  Pt  a 
+ Width at Base  b 
+  Shape   null  
+
+ Stem  Flesh  Texture  Yes 
+ Surface Color  c  
+  Flesh  Color  ed 
+  Surface     Tomentose
+
+Taxonomic  Info
+Taxon null 
+Date   20/04/2017 
+ Collector(s)  
+Collector No   nullPhoto  No.  null   
+ 
+Chemical Characteristics
+ ASCI  stain in Iodine null 
+ Nuclei  embedded in AcetoCarmine null
+ Spore  ornamentation staining in cotton of analine 
+ blue or lactin  acid  null    
+
+General Characteristics
+Sporo Cap Type  null 
+Shape  null  
+  Taste  null 
+Abhymenium Texture  null 
+Odor   null
+ Entire  Heightnull   
+  Cap  Width   
+ Stem Length  null
+Cap Flesh  Thickness  null  
+Flesh Color and  Brusing null
+Hymenium Color  null
+ Abhymenium Color  null   
+ 
+Stalk Characteristics
+ Stalk  Present  null 
+  Length    null 
+ Width at  Widest  Pt  null 
+ Width at Base  null 
+  Shape   null  
+
+ Stem  Flesh  Texture  null 
+ Surface Color  null  
+  Flesh  Color  null 
+  Surface     null
