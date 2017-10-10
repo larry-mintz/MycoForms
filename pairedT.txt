@@ -1,0 +1,71 @@
+
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+ a.l.o.s   0.025
+ Paired- T value    1.014814456337403
+Critical value   0.0
+ p-value   0.0
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+ a.l.o.s   0.1
+ Paired- T value    -0.5570860145311556
+Critical value   0.0
+ p-value   0.0
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+ a.l.o.s   0.025
+ Paired- T value    -1.9639610121239315
+Critical value   [D@7761b1
+ p-value   [D@782127
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+ a.l.o.s   0.025
+ Paired- T value    2.1380899352993947
+Critical value   null
+ p-value   null
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   10
+ a.l.o.s   0.1
+ Paired- T value    -0.8152708217572107
+Critical value   null
+ p-value   null
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   4
+ a.l.o.s   0.1
+ Paired- T value    1.0128697779159586
+Critical value   null
+ p-value   null
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   4
+ a.l.o.s   0.1
+ Paired- T value    1.0128697779159586
+Critical value   null
+ p-value   null
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   4
+ a.l.o.s   0.05
+ Paired- T value    0.1605863182716568
+Critical value   null
+ p-value   null
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   4
+ a.l.o.s   0.025
+ Paired- T value    -0.15861031714362886
+Critical value   0.0
+ p-value   0.8774779057728181
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   3
+ a.l.o.s   0.005
+ Paired- T value    1.8605210188381267
+Critical value   11.68181861947301
+ p-value   0.09573390947125895

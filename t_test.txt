@@ -1,0 +1,43 @@
+
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+a.l.o.s   0.0
+T value    0.000000
+Critical value   0.000000
+ p-value   0.000000
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+a.l.o.s   0.0
+T value    0.000000
+Critical value   0.000000
+ p-value   0.000000
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+a.l.o.s   0.025
+T value    0.898146
+Critical value   0.000000
+ p-value   0.000000
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+a.l.o.s   0.025
+T value    32.551884081151194
+Critical value   3.1824463048574763
+ p-value   5.889423719107214E-5
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1.0
+a.l.o.s   0.05
+T value    53.0
+Critical value   -2.3533634348018744
+ p-value   3.871372728911031E-6
+Null Hypothesis   
+Alternative Hypothesis   
+df   1.0
+a.l.o.s   0.05
+T value    0.3990704655606529
+Critical value   -1.8124611228157785
+ p-value   0.1424922652725286

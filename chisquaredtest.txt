@@ -1,0 +1,23 @@
+
+
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   5.0
+a.l.o.s   0.05
+Chi value    0.0
+Critical value   0.0
+p-value   0.0
+Null Hypothesis   one
+Alternative Hypothesis   two
+df   5.0
+a.l.o.s   0.025
+Chi value    0.0
+Critical value   0.0
+p-value   0.0
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   5.0
+a.l.o.s   0.025
+Chi value    0.000000
+Critical value   0.000000
+p-value   0.000000

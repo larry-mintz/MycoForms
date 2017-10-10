@@ -1,0 +1,15 @@
+
+Null Hypothesis   null
+Alternative Hypothesis   null
+df   1
+ a.l.o.s   0.025
+ 1- Sample Variance value    0.0
+Critical value   0.0
+ p-value   0.0
+Null Hypothesis   null
+Alternative Hypothesis   null
+  N  4
+ a.l.o.s   0.025
+ 1- Sample Variance value    302.563
+Critical value   9.148529270389172
+ p-value   0.027379920826102966
