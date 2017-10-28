@@ -5,15 +5,11 @@ import org.apache.commons.math3.distribution.ChiSquaredDistribution;
 import org.apache.commons.math3.distribution.TDistribution;
  import org.apache.commons.math3.distribution.FDistribution;
  import  java.util.Arrays;
+ import javax.swing.table.*;
 import com.sun.glass.events.KeyEvent;
-import javax.swing.JOptionPane;
- import javax.swing.JLabel ; 
-               
-import javax.swing.JScrollPane;
+import javax.swing.JOptionPane;            
 import java.util.Date;
-import  java.util.*;
 import java.text.SimpleDateFormat;
-import java.text.DateFormat;
 import java.io.FileWriter;
 import java.io.File;
 import  java.io.BufferedWriter;
@@ -4397,11 +4393,11 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "", "Treatment", "Col  1/obs", "col  2/ expected", "ranked obs", "ranked obs", "ranked obs"
+                "", "Col  1/obs", "col  2/ expected", "ranked obs", "ranked obs", "ranked obs", "Treatment"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Long.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+                java.lang.Integer.class, java.lang.Long.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, true, true, true, true, true, true
@@ -5518,9 +5514,9 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                     .addGroup(TwoSampletTestPaneLayout.createSequentialGroup()
                         .addGap(220, 220, 220)
                         .addComponent(jLabel197, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(twoSampleCrit)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(twoSampleCrit, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         TwoSampletTestPaneLayout.setVerticalGroup(
             TwoSampletTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5573,7 +5569,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel196, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(TwoSampletTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(TwoSampletTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel197, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(twoSampleCrit))))
                 .addGap(30, 30, 30)
@@ -6531,7 +6527,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                         .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6965,7 +6961,15 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-protected void checkNulloption()
+
+    
+    
+  public void Remove( int col_index){
+  TableColumn tcol = StatsTable.getColumnModel().getColumn(col_index);
+  StatsTable.removeColumn(tcol);
+  }
+    
+    protected void checkNulloption()
 {
      if (  j2tailed == true)
    {NullOption= "=";
@@ -6986,25 +6990,49 @@ e.printStackTrace(p);
 }
 
 
-public  void setColumns(int x,int  y)
+public  void setColumns()
  {
    
-  if(chi_squared==true)
+  if(chi_squared==true   ||  Gtest==true)
   {
-    for(int col=4;col<7;col++)
-StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col)); 
-
+    
+  Remove(5);
+Remove(4);
+Remove(3);
+ 
   }
  if(t_Test==true)
  {
-    for(int col=3;col<=5;col++)
-StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col));  
+
+Remove(6);
+Remove(5);
+Remove(4);
+Remove(2);
+Remove(2);
+ 
+ }
+ 
+ if(TwoSampleT==true)
+ {
+     
+Remove(6);
+Remove(5);
+Remove(4);
+Remove(3);
+
+    
+    
+ }
+ 
+ if(Ftest==true)
+ {
+     Remove(6);
+Remove(5);
+Remove(4);
+Remove(2);        
  }
  
  }
-
-
-
 
    protected  void clear_table()
    {
@@ -9223,7 +9251,7 @@ StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col));
       }catch(Exception e)   {simplelogger(e);
       //JOptionPane.showMessageDialog(null,"Input error: see err.log  for more info.");
       }
-     System.out.print(Arrays.toString(data));
+    
               String  ans;
         ans = JOptionPane.showInputDialog("Enter sample  mean: ");
         mu= Double.parseDouble(ans);
@@ -10046,7 +10074,7 @@ StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col));
               KS=true;
              ans = JOptionPane.showInputDialog("You can have up to 5  columns");
              y= Integer.parseInt(ans);
-            setColumns(10,y);
+            setColumns();
   
         col3.setEditable(true);
         jLabel173.setForeground(java.awt.Color.BLACK);
@@ -10103,6 +10131,8 @@ StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col));
 
     private void StatsTableFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_StatsTableFocusGained
              String  header,header2,header0,h3,h4,h5;
+             int  cols;
+             
              
               col3.setEditable(false);
               col4.setEditable(false);
@@ -10128,7 +10158,7 @@ StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col));
     StatsTable.repaint();
 
    
-    setColumns(10,y);
+    setColumns();
     }//GEN-LAST:event_StatsTableFocusGained
    
     private void jSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSaveActionPerformed
@@ -10445,7 +10475,7 @@ StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col));
     }//GEN-LAST:event_jPaired_tTestRadioButActionPerformed
 
     private void Two_tCriticalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Two_tCriticalActionPerformed
-        // TODO add your handling code here:
+        // TODOadd your handling code here:
     }//GEN-LAST:event_Two_tCriticalActionPerformed
 
     private void jVarianceRadioButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVarianceRadioButActionPerformed
@@ -10479,10 +10509,6 @@ StatsTable.removeColumn(StatsTable.getColumnModel().getColumn(col));
           }
           
     }//GEN-LAST:event_jTwoSampleVarianceRadioButActionPerformed
-
-    private void var_opt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_var_opt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_var_opt1ActionPerformed
       
     
     /**

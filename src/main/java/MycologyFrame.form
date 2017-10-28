@@ -5852,7 +5852,7 @@
                                   <Component id="filler1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="106" max="32767" attributes="0"/>
+                          <EmptySpace pref="88" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5938,12 +5938,12 @@
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="7" rowCount="10">
                             <Column editable="false" title="" type="java.lang.Integer"/>
-                            <Column editable="true" title="Treatment" type="java.lang.String"/>
                             <Column editable="true" title="Col  1/obs" type="java.lang.Long"/>
                             <Column editable="true" title="col  2/ expected" type="java.lang.Double"/>
                             <Column editable="true" title="ranked obs" type="java.lang.Double"/>
                             <Column editable="true" title="ranked obs" type="java.lang.Double"/>
                             <Column editable="true" title="ranked obs" type="java.lang.Double"/>
+                            <Column editable="true" title="Treatment" type="java.lang.String"/>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -7884,11 +7884,11 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
                                           <Component id="jLabel197" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Component id="twoSampleCrit" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="twoSampleCrit" min="-2" pref="68" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="61" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -7956,9 +7956,9 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel196" min="-2" pref="38" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel197" min="-2" pref="24" max="-2" attributes="0"/>
-                                              <Component id="twoSampleCrit" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel197" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="twoSampleCrit" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
