@@ -5812,12 +5812,12 @@
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel113" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                                  <Component id="H2" min="-2" pref="109" max="-2" attributes="0"/>
+                                                  <Component id="col2" min="-2" pref="109" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel106" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="title" min="-2" pref="103" max="-2" attributes="0"/>
+                                                  <Component id="col1" min="-2" pref="103" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
@@ -5875,7 +5875,7 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="title" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="col1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel106" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel203" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="col4" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -5883,7 +5883,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel113" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="H2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="col2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel187" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="col5" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -8086,9 +8086,6 @@
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="text" type="java.lang.String" value="textField3"/>
                           </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Two_tCriticalActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="java.awt.TextField" name="TwoTest_pval">
                           <Properties>
@@ -9176,9 +9173,6 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="t_Critical">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="t_CriticalActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel130">
                           <Properties>
@@ -9429,9 +9423,9 @@
                                                   <Component id="var_H0" min="-2" pref="108" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                                   <Component id="jLabel169" min="-2" pref="33" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                                  <Component id="var_opt1" min="-2" pref="55" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="var_opt1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                                   <Component id="jLabel191" min="-2" pref="33" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -9508,14 +9502,12 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   <Component id="jLabel166" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="var_opt1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel167" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="var_H0" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel169" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel191" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel167" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="var_H0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel169" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel191" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="var_opt1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -9745,14 +9737,6 @@
                             <Property name="text" type="java.lang.String" value="&lt;html&gt;&amp;sigma&lt;sub&gt;1&lt;/sub&gt;&lt;/html&gt;"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="var_opt1">
-                          <Properties>
-                            <Property name="editable" type="boolean" value="false"/>
-                          </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="var_opt1ActionPerformed"/>
-                          </Events>
-                        </Component>
                         <Component class="javax.swing.JTextField" name="var_alt">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
@@ -9863,6 +9847,11 @@
                             <Property name="text" type="java.lang.String" value="jLabel109"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JTextField" name="var_opt1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="jTextField4"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                   </SubComponents>
@@ -9899,7 +9888,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jSaveActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="title">
+                <Component class="javax.swing.JTextField" name="col1">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel106">
                   <Properties>
@@ -9914,7 +9903,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="H2">
+                <Component class="javax.swing.JTextField" name="col2">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel113">
                   <Properties>

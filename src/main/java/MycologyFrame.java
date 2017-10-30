@@ -1,6 +1,5 @@
  import   org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import   org.apache.commons.math3.stat.descriptive.SummaryStatistics;
- import  java.io.*;
 import org.apache.commons.math3.distribution.ChiSquaredDistribution;
 import org.apache.commons.math3.distribution.TDistribution;
  import org.apache.commons.math3.distribution.FDistribution;
@@ -749,7 +748,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         var_H1 = new javax.swing.JTextField();
         statement = new javax.swing.JLabel();
         jLabel169 = new javax.swing.JLabel();
-        var_opt1 = new javax.swing.JTextField();
         var_alt = new javax.swing.JTextField();
         jLabel189 = new javax.swing.JLabel();
         jLabel190 = new javax.swing.JLabel();
@@ -760,11 +758,12 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         varCrit = new javax.swing.JLabel();
         jLabel205 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
+        var_opt1 = new javax.swing.JTextField();
         jClearResults = new javax.swing.JButton();
         jSave = new javax.swing.JButton();
-        title = new javax.swing.JTextField();
+        col1 = new javax.swing.JTextField();
         jLabel106 = new javax.swing.JLabel();
-        H2 = new javax.swing.JTextField();
+        col2 = new javax.swing.JTextField();
         jLabel113 = new javax.swing.JLabel();
         Treatment = new javax.swing.JTextField();
         jLabel114 = new javax.swing.JLabel();
@@ -5379,11 +5378,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         Two_tCritical.setEditable(false);
         Two_tCritical.setText("textField3");
-        Two_tCritical.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Two_tCriticalActionPerformed(evt);
-            }
-        });
 
         TwoTest_pval.setEditable(false);
         TwoTest_pval.setText("textField4");
@@ -5900,12 +5894,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         tResult.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tResult.setForeground(new java.awt.Color(17, 2, 2));
 
-        t_Critical.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                t_CriticalActionPerformed(evt);
-            }
-        });
-
         jLabel130.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel130.setForeground(new java.awt.Color(7, 0, 0));
         jLabel130.setText("<html> &mu  <sub>2</sub></html>");
@@ -6231,13 +6219,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         jLabel169.setForeground(new java.awt.Color(17, 6, 6));
         jLabel169.setText("<html>&sigma<sub>1</sub></html>");
 
-        var_opt1.setEditable(false);
-        var_opt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                var_opt1ActionPerformed(evt);
-            }
-        });
-
         var_alt.setEditable(false);
 
         jLabel189.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -6276,6 +6257,8 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         jLabel109.setText("jLabel109");
 
+        var_opt1.setText("jTextField4");
+
         javax.swing.GroupLayout OneSampleVariancePaneLayout = new javax.swing.GroupLayout(OneSampleVariancePane);
         OneSampleVariancePane.setLayout(OneSampleVariancePaneLayout);
         OneSampleVariancePaneLayout.setHorizontalGroup(
@@ -6304,9 +6287,9 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                                 .addComponent(var_H0, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
                                 .addComponent(jLabel169, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(var_opt1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(var_opt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
                                 .addComponent(jLabel191, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
@@ -6363,13 +6346,12 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
             .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel166, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(var_opt1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel167, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(var_H0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel169, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel191, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel167, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(var_H0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel169, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel191, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(var_opt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel168, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -6499,11 +6481,11 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                                     .addGroup(jPanel18Layout.createSequentialGroup()
                                         .addComponent(jLabel113)
                                         .addGap(4, 4, 4)
-                                        .addComponent(H2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(col2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel18Layout.createSequentialGroup()
                                         .addComponent(jLabel106)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(col1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(68, 68, 68)
                                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel18Layout.createSequentialGroup()
@@ -6544,14 +6526,14 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                         .addComponent(col3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(col1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel106)
                     .addComponent(jLabel203)
                     .addComponent(col4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel113)
-                    .addComponent(H2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(col2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel187)
                     .addComponent(col5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -7029,7 +7011,7 @@ Remove(3);
      Remove(6);
 Remove(5);
 Remove(4);
-Remove(2);        
+Remove(3 );        
  }
  
  }
@@ -10137,8 +10119,8 @@ Remove(2);
               col3.setEditable(false);
               col4.setEditable(false);
               col5.setEditable(false);
-              header=title.getText();
-              header2=H2.getText();
+              header=col1.getText();
+              header2=col2.getText();
               
               header0=Treatment.getText();    
         StatsTable.setShowGrid(true);
@@ -10150,10 +10132,14 @@ Remove(2);
      }
    
       StatsTable.setGridColor(java.awt.Color.black);
-    StatsTable.getColumnModel().getColumn(2).setHeaderValue(header);
-     StatsTable.getColumnModel().getColumn(3).setHeaderValue(header2);
-     StatsTable.getColumnModel().getColumn(1).setHeaderValue(header0);
     
+      if( Ftest==true  || TwoSampleT==true||paired_t==true)
+      {     
+    StatsTable.getColumnModel().getColumn(1).setHeaderValue(header);
+     StatsTable.getColumnModel().getColumn(2).setHeaderValue(header2);
+      }
+      
+      
    
     StatsTable.repaint();
 
@@ -10352,8 +10338,8 @@ Remove(2);
     private void jClearResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jClearResultsActionPerformed
          jH0EdFeild.setText("    ");
       jH1EditFeild.setText( "   ");
-      title.setText("   ");
-     H2.setText("   ");
+      col1.setText("   ");
+     col2.setText("   ");
     clear_table();
     
         if(ChiSquarePane.isShowing() &&  chi_squared)
@@ -10455,10 +10441,6 @@ Remove(2);
       
     }//GEN-LAST:event_jTestTypeActionPerformed
 
-    private void t_CriticalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_CriticalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_t_CriticalActionPerformed
-
     private void jPaired_tTestRadioButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPaired_tTestRadioButActionPerformed
         if(jPaired_tTestRadioBut.isSelected())
           {
@@ -10473,10 +10455,6 @@ Remove(2);
           jTwoSampleVarianceRadioBut.setSelected(false);
           }
     }//GEN-LAST:event_jPaired_tTestRadioButActionPerformed
-
-    private void Two_tCriticalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Two_tCriticalActionPerformed
-        // TODOadd your handling code here:
-    }//GEN-LAST:event_Two_tCriticalActionPerformed
 
     private void jVarianceRadioButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVarianceRadioButActionPerformed
        if(jVarianceRadioBut.isSelected())
@@ -10589,7 +10567,6 @@ Remove(2);
     private java.awt.TextField H12Test;
     private javax.swing.JTextField H1Displayfeild;
     private javax.swing.JTextField H1testsign;
-    private javax.swing.JTextField H2;
     private java.awt.TextField HO2Test;
     private javax.swing.JPanel KendalWTestPane;
     private javax.swing.JLabel Kendal_cv;
@@ -10612,6 +10589,8 @@ Remove(2);
     private javax.swing.JPanel WilcoxanPane;
     private javax.swing.JTextField alphaDisplay;
     private javax.swing.JLabel chi_criteria;
+    private javax.swing.JTextField col1;
+    private javax.swing.JTextField col2;
     private javax.swing.JTextField col3;
     private javax.swing.JTextField col4;
     private javax.swing.JTextField col5;
@@ -11151,7 +11130,6 @@ Remove(2);
     private javax.swing.JTextField testsign;
     private java.awt.TextField textField6;
     private java.awt.TextField textField7;
-    private javax.swing.JTextField title;
     private javax.swing.JLabel twoSampleCrit;
     private java.awt.TextField twoSampleT;
     private javax.swing.JLabel varCrit;
