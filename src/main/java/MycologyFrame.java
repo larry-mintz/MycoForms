@@ -6977,42 +6977,32 @@ public  void setColumns()
    
   if(chi_squared==true   ||  Gtest==true)
   {
-    
+   // StatsTable.moveColumn(6,1);
   Remove(5);
 Remove(4);
-Remove(3);
- 
+Remove(4);
+
+
+
   }
- if(t_Test==true)
+ if(t_Test==true   ||one_sample==true)
  {
 
-Remove(6);
-Remove(5);
-Remove(4);
-Remove(2);
-Remove(2);
- 
- }
- 
- if(TwoSampleT==true)
- {
-     
 Remove(6);
 Remove(5);
 Remove(4);
 Remove(3);
-
-    
-    
+ 
  }
  
- if(Ftest==true)
+ if(TwoSampleT==true    ||  Ftest==true   || paired_t==true)
  {
      Remove(6);
 Remove(5);
 Remove(4);
-Remove(3 );        
- }
+
+ 
+     }
  
  }
 
@@ -10121,8 +10111,8 @@ Remove(3 );
               col5.setEditable(false);
               header=col1.getText();
               header2=col2.getText();
-              
-              header0=Treatment.getText();    
+              Treatment.setEditable(false);
+               
         StatsTable.setShowGrid(true);
          int rows=StatsTable.getRowCount();
     
@@ -10135,12 +10125,32 @@ Remove(3 );
     
       if( Ftest==true  || TwoSampleT==true||paired_t==true)
       {     
+          
     StatsTable.getColumnModel().getColumn(1).setHeaderValue(header);
      StatsTable.getColumnModel().getColumn(2).setHeaderValue(header2);
       }
       
+      if(chi_squared==true   ||  Gtest==true)
+      {
+        Treatment.setEditable(true);
+      header0=Treatment.getText(); 
+      StatsTable.getColumnModel().getColumn(6).setHeaderValue(header0);
+      StatsTable.getColumnModel().getColumn(1).setHeaderValue(header);
+     StatsTable.getColumnModel().getColumn(2).setHeaderValue(header2);
+      }
       
-   
+      
+      if(t_Test==true)
+      {
+          Treatment.setEditable(false);
+          col2.setEditable(false);
+      StatsTable.getColumnModel().getColumn(1).setHeaderValue(header);
+      }
+      
+     
+      
+      
+      
     StatsTable.repaint();
 
    
