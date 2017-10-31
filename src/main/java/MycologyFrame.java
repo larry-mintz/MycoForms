@@ -4392,11 +4392,11 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "", "Col  1/obs", "col  2/ expected", "ranked obs", "ranked obs", "ranked obs", "Treatment"
+                "", "Treatment", "Col  1/obs", "col  2/ expected", "ranked obs", "ranked obs", "ranked obs"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Long.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Long.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
                 false, true, true, true, true, true, true
@@ -6997,10 +6997,18 @@ Remove(3);
  
  if(TwoSampleT==true    ||  Ftest==true   || paired_t==true)
  {
-     Remove(6);
-Remove(5);
-Remove(4);
+     
+ for(int i=2;i<StatsTable.getColumnCount();++i)    
+{Remove(4);}
+ 
+ Remove(1);
+      
+ 
+ 
+ 
 
+  
+ 
  
      }
  
