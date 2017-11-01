@@ -49,7 +49,7 @@ public class MycologyFrame extends javax.swing.JFrame {
     
        double [] pvalue = new double [15];
                double [] critical_value = new double [15];
-    int  recno =1,dof=1,n=1,df1,df2,y;
+    int  recno =1,dof=1,n=1,df1,df2,y,m;
 String date_format,alphadisplay;
 String  Record,H0,H1;
 /* Taxon  data fields  */
@@ -6974,16 +6974,36 @@ e.printStackTrace(p);
 
 public  void setColumns()
  {
+     
+   if(KS==true)
+   {
+       
+       switch (y) {
+     
+       case 2:
+           for(int i=2;i<StatsTable.getColumnCount();++i)    
+          {Remove(4);}
+          Remove(1);
+       break;
+       case 3:
+        Remove(5);
+         Remove(4);
+        Remove(4);
+       break;
+       case 4:
+       break;
+       case 5:
+       break;
+      
+       }
    
+   }  
+       
   if(chi_squared==true   ||  Gtest==true)
   {
-   // StatsTable.moveColumn(6,1);
   Remove(5);
 Remove(4);
 Remove(4);
-
-
-
   }
  if(t_Test==true   ||one_sample==true)
  {
@@ -9512,7 +9532,7 @@ Remove(3);
      if(KendalWTestPane.isShowing() && KS)
            {
              double  R,S,W,test ;
-             int n=1,m;
+             int n=1;
              
           double [] rank = new double [10];
         
@@ -10155,7 +10175,7 @@ Remove(3);
       }
       
       
-      if(t_Test==true)
+      if(t_Test==true ||  one_sample==true)
       {
           Treatment.setEditable(false);
           col2.setEditable(false);
