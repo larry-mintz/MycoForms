@@ -6986,13 +6986,16 @@ public  void setColumns()
           Remove(1);
        break;
        case 3:
-        Remove(5);
-         Remove(4);
-        Remove(4);
+        Remove(6);
+         Remove(5);
+        Remove(1);
        break;
        case 4:
+        Remove(6);
+        Remove(1);
        break;
        case 5:
+       Remove(1);
        break;
       
        }
