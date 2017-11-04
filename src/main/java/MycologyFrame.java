@@ -7008,23 +7008,36 @@ public  void setColumns()
 Remove(4);
 Remove(4);
   }
- if(t_Test==true   ||one_sample==true)
+ if(t_Test==true   || one_sample==true || wilcoxan==true)
  {
 
 Remove(6);
 Remove(5);
 Remove(4);
-Remove(3);
+Remove(2);
+Remove(1);
+
  
  }
  
- if(TwoSampleT==true    ||  Ftest==true   || paired_t==true)
+ if(TwoSampleT==true    ||  Ftest==true   || paired_t==true|| U_Test==true)
  {
-     
- for(int i=2;i<StatsTable.getColumnCount();++i)    
-{Remove(4);}
+    
+      for(int i=2;i<=StatsTable.getColumnCount();++i)    
+          {Remove(4);}
+      Remove(1);
+   
+    
+    
+  
+  
+  
+  
+    
+  
+         
+
  
- Remove(1);
       
  
  
@@ -10157,7 +10170,7 @@ Remove(3);
       
       
     
-      if( Ftest==true  || TwoSampleT==true||paired_t==true)
+      if( Ftest==true  || TwoSampleT==true||paired_t==true|| U_Test==true)
       {     
        header=col1.getText();
       header2=col2.getText();
