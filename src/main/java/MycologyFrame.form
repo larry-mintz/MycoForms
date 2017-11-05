@@ -9353,7 +9353,7 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="1" green="1" red="13" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="&lt;html&gt; Reject H &lt;sub&gt;0 &lt;/sub&gt;  if  &lt;/html&gt;"/>
+                            <Property name="text" type="java.lang.String" value="&lt;html&gt; Reject H &lt;sub&gt;0 &lt;/sub&gt;  if  t&lt;/html&gt;"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="tCriteria">

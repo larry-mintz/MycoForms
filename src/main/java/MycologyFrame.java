@@ -5953,7 +5953,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         jLabel143.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel143.setForeground(new java.awt.Color(19, 1, 1));
-        jLabel143.setText("<html> Reject H <sub>0 </sub>  if  </html>");
+        jLabel143.setText("<html> Reject H <sub>0 </sub>  if  t</html>");
 
         tCriteria.setText("jLabel109");
 
@@ -9257,9 +9257,9 @@ Remove(1);
     {
       
        if (Integer.parseInt(StatsTable.getValueAt(i,0).toString()) != 0)
-      data[i]=Double.parseDouble(StatsTable.getValueAt(i, 3).toString());
+      data[i]=Double.parseDouble(StatsTable.getValueAt(i, 1).toString());
 
-      df++; 
+        df++; 
 
  
      }
@@ -9284,10 +9284,10 @@ Remove(1);
                        TDistribution t = new TDistribution(df-1);
                        if( j2tailed==true )
                        critical_value[1]=2*t.inverseCumulativeProbability(1- (2*alpha/2));
-                         NullOption="<=";
+                        
                           if(NullOption.equals("<= "))
                               critical_value[1]=t.inverseCumulativeProbability(1- alpha);
-                            NullOption=">=";
+                           
                            if( NullOption.equals(">=") )
                               critical_value[1]=t.inverseCumulativeProbability(alpha);
                     
@@ -9309,10 +9309,12 @@ Remove(1);
                      H0=jH0EdFeild.getText();
                       tTestH0.setText(H0);
                       H1=jH1EditFeild.getText();
+                     
                       tTestH1.setText(H1); 
-                                     
-                      testsign.setText(NullOption);
-                      H1testsign.setText(ATO);
+                                 
+                      testsign.setText(ATO);
+                      H1testsign.setText(NullOption);
+                    
                       
                       String  c1=String.format(" <= %5.3f",critical_value[2]);
          String  c2=String.format(" >= %5.3f",critical_value[2]);
@@ -9335,11 +9337,11 @@ Remove(1);
        
                
                if(critical_value[1]<=tStar)
-               tCriteria.setText(c1);
+               tCriteria.setText(_t);
                   if(critical_value[1]>=tStar)
-               tCriteria.setText(c2);
+               tCriteria.setText(_t);
                  if(critical_value[1]==tStar)
-                  tCriteria.setText(c3);
+                  tCriteria.setText(_t);
                       
                    
                       
