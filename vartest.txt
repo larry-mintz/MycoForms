@@ -13,3 +13,10 @@ Alternative Hypothesis   null
  1- Sample Variance value    302.563
 Critical value   9.148529270389172
  p-value   0.027379920826102966
+Null Hypothesis   1
+Alternative Hypothesis   
+  N  1000
+ a.l.o.s   0.01
+ 1- Sample Variance value    118.110
+Critical value   887.6212728413904
+ p-value   0.9949999518131323

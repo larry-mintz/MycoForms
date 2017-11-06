@@ -6248,6 +6248,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         jLabel205.setText("p-value");
         jLabel205.setBorder(new javax.swing.border.MatteBorder(null));
 
+        var_opt1.setEditable(false);
         var_opt1.setText("jTextField4");
 
         javax.swing.GroupLayout OneSampleVariancePaneLayout = new javax.swing.GroupLayout(OneSampleVariancePane);
@@ -9819,14 +9820,14 @@ Remove(1);
            }
             
             
-             var_opt1.setText(NullOption);
-             var_alt.setText(ATO);
-            var_H0.setText(H0);
-            var_H1.setText(H1);
-             size.setText(Integer.toString(n));
+           
+         size.setText(Integer.toString(n));
+   
              
                if( j2tailed == true)
              {
+                  NullTestOption="==";
+                  ATO="<>";
               beta=1-(alpha/2);
              ChiSquaredDistribution LB =  new ChiSquaredDistribution(n-1,alpha/2);
              ChiSquaredDistribution UB =  new ChiSquaredDistribution(n-1,beta);
@@ -9842,14 +9843,15 @@ Remove(1);
              } 
                  
                  
-              String j2tailstatement = String.format("Since %2.3f <=%2.3f<= %2.3f, we cannot reject the Null Hypothesis",LBcv,var,UBcv);
-                  statement.setText(j2tailstatement);
+              
              }
                 
                 H0=jH0EdFeild.getText();
                   H1=jH1EditFeild.getText();
                 var_H0.setText(H0);
                 var_H1.setText(H1);
+                         var_opt1.setText(NullTestOption);
+             var_alt.setText(ATO);
                _var=String.format("%2.3f",var);
               String _cv= String.format("%2.3f",critical_value[4]);
                   var_ts.setText(_var);
@@ -9866,6 +9868,7 @@ Remove(1);
      String  GTthan= String.format("  Since    %2.3f >= %2.3f  we  can  accept  the Null Hypothesis",var,critical_value[4]);
        String  ha_lessthan= String.format("  Since    %2.3f>  %2.3f  we  can  reject  the Null Hypothesis",var,critical_value[4]);
        String  ha_GTthan= String.format("  Since    %2.3f< %2.3f   we  can  reject  the Null Hypothesis",var,critical_value[4]);
+     String  NotEq = String.format("  Since    %2.3f<> %2.3f   we  can  reject  the Null Hypothesis",var,critical_value[4]);
      
        
        if  (var<=critical_value[4])
@@ -9873,8 +9876,7 @@ Remove(1);
          statement.setText(lessthan);
          varCrit.setText(varcrit1);
         }
-        
-     if(var> critical_value[4]);
+        else
      {
          statement.setText(ha_lessthan);
           varCrit.setText(varcrit2);
@@ -9886,14 +9888,17 @@ Remove(1);
         statement.setText(GTthan); 
        varCrit.setText(varcrit3); 
      }
+     else
+        statement.setText(ha_GTthan); 
      
      
-      if(var< critical_value[4])
-              statement.setText(ha_GTthan); 
-     
-     
-    
-     
+    if(j2tailed==true)
+    {
+    String j2tailstatement = String.format("Since %2.3f <=%2.3f<= %2.3f, we cannot reject the Null Hypothesis",LBcv,var,UBcv);
+    statement.setText(j2tailstatement);
+    }
+    else
+       statement.setText(NotEq); 
            
    
            } 
@@ -9911,8 +9916,8 @@ Remove(1);
        try{
        for(int i=0;  i<=rows;++i)
     {if (StatsTable.getValueAt(i,0) != null)
-      {t0[i]=Double.parseDouble(StatsTable.getValueAt(i, 2).toString() );
-       t1[i]= Double.parseDouble(StatsTable.getValueAt(i, 3).toString() );
+      {t0[i]=Double.parseDouble(StatsTable.getValueAt(i, 1).toString() );
+       t1[i]= Double.parseDouble(StatsTable.getValueAt(i, 2).toString() );
        dof++;
       }
     
