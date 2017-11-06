@@ -9796,10 +9796,10 @@ Remove(1);
                  double  [] variance_t= new double [1000]; 
                  
                 try{
-       for(int i=0;  i<=4;++i)
+       for(int i=0;  i<=10;++i)
              {if (StatsTable.getValueAt(i,0)  != null)
       {
-       variance_t[i]= Double.parseDouble(StatsTable.getValueAt(i, 3).toString() ); 
+       variance_t[i]= Double.parseDouble(StatsTable.getValueAt(i, 1).toString() ); 
       
       } }  
       }catch(Exception e)   {simplelogger(e);
@@ -10123,12 +10123,6 @@ Remove(1);
           }
     }//GEN-LAST:event_jtTestRadioButActionPerformed
 
-    private void NULLTextDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NULLTextDisplayActionPerformed
-
-        NULLTextDisplay.setText(H0);
-     
-    }//GEN-LAST:event_NULLTextDisplayActionPerformed
-
     private void jALOSCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jALOSCBActionPerformed
       
         Object jALOSCBObj= jALOSCB.getSelectedItem();
@@ -10146,342 +10140,7 @@ Remove(1);
             j2tailed=true;
          }
     }//GEN-LAST:event_j2TailedRadioButtonActionPerformed
-
-    private void StatsTableFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_StatsTableFocusGained
-             String  header,header2,header0,h3,h4,h5;
-             int  cols;
-             
-             
-              col3.setEditable(false);
-              col4.setEditable(false);
-              col5.setEditable(false);
-              
-              Treatment.setEditable(false);
-               
-        StatsTable.setShowGrid(true);
-         int rows=StatsTable.getRowCount();
-    
-   for(int i = 0; i<rows;++i)
-   {StatsTable.setValueAt(i+1, i,0);
-  
-     }
    
-      StatsTable.setGridColor(java.awt.Color.black);
-      
-    
-      
-      
-    
-      if( Ftest==true  || TwoSampleT==true||paired_t==true|| U_Test==true)
-      {     
-       header=col1.getText();
-      header2=col2.getText();
-    StatsTable.getColumnModel().getColumn(2).setHeaderValue(header);
-     StatsTable.getColumnModel().getColumn(3).setHeaderValue(header2);
-      }
-      
-      
-      if(chi_squared==true   ||  Gtest==true)
-      {
-        Treatment.setEditable(true);
-      header0=Treatment.getText(); 
-     header=col1.getText();
-      header2=col2.getText();
-      StatsTable.getColumnModel().getColumn(1).setHeaderValue(header0);
-      StatsTable.getColumnModel().getColumn(2).setHeaderValue(header);
-     StatsTable.getColumnModel().getColumn(3).setHeaderValue(header2);
-      }
-      
-      
-      if(t_Test==true ||  one_sample==true)
-      {
-          Treatment.setEditable(false);
-          col2.setEditable(false);
-          header=col1.getText();
-          StatsTable.getColumnModel().getColumn(2).setHeaderValue(header);
-      StatsTable.getColumnModel().getColumn(1).setHeaderValue(header);
-      }
-      
-     
-      
-      
-      
-    StatsTable.repaint();
-
-   
-    setColumns();
-    }//GEN-LAST:event_StatsTableFocusGained
-   
-    private void jSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSaveActionPerformed
-   
-        
-        if(FTestPane.isShowing() && Ftest  )
-        {
-        String  ftest="\r\nNull Hypothesis   %s"
-            + "\r\nAlternative Hypothesis   %s"
-            + "\r\n  df1   %s"
-            + "\r\n df2 %s"
-            + "\r\n a.l.o.s   %s"
-            + "\r\n F  test value    %s"
-            + "\r\nCritical value   %s"
-            + "\r\n p-value   %s";
-        
-        try{
-                 File F_test;   
-                  F_test =new File("Ftest.txt");
-                   if(!F_test.exists()){
-                      F_test.createNewFile();
-                 }   
-     
-            FileWriter  fw=  new FileWriter(F_test,true);
-            BufferedWriter  bw =new BufferedWriter(fw);
-            PrintWriter  pw = new PrintWriter(bw);
-      pw.printf(ftest,H0,H1,df1,df2,alpha,Ftest,critical_value[7],pvalue[7]);
-      pw.close();
-         }catch(IOException  ioe){
-                     System.out.println("Error  occured:");
-                     ioe.printStackTrace();
-         }         
-        
-    
-        }
-        
-     
-     if(OneSampleVariancePane.isShowing()  &&  one_sample)
-     {
-     String  vartest="\r\nNull Hypothesis   %s"
-            + "\r\nAlternative Hypothesis   %s"
-            + "\r\n  N  %s"
-            + "\r\n a.l.o.s   %s"
-            + "\r\n 1- Sample Variance value    %s"
-            + "\r\nCritical value   %s"
-            + "\r\n p-value   %s";
-     try{
-                 File var_test;   
-                  var_test =new File("vartest.txt");
-                   if(!var_test.exists()){
-                      var_test.createNewFile();
-                 }   
-     
-            FileWriter  fw=  new FileWriter(var_test,true);
-            BufferedWriter  bw =new BufferedWriter(fw);
-            PrintWriter  pw = new PrintWriter(bw);
-      pw.printf(vartest,H0,H1,n,alpha,_var,critical_value[4],pvalue[4]);
-      pw.close();
-         }catch(IOException  ioe){
-                     System.out.println("Error  occured:");
-                     ioe.printStackTrace();
-         }         
-     } 
-        
-      
-     if(Paired_tTestPanel.isShowing()   &&  paired_t)
-    {
-      
-        
-        String  pairedt_test="\r\nNull Hypothesis   %s"
-            + "\r\nAlternative Hypothesis   %s"
-            + "\r\ndf   %s"
-            + "\r\n a.l.o.s   %s"
-            + "\r\n Paired- T value    %s"
-            + "\r\nCritical value   %s"
-            + "\r\n p-value   %s";
-         try{
-                 File  pairedt_testFile;   
-                   pairedt_testFile =new File("pairedT.txt");
-                   if(!pairedt_testFile.exists()){
-                       pairedt_testFile.createNewFile();
-                 }   
-                   FileWriter  fw=  new FileWriter(pairedt_testFile,true);
-            BufferedWriter  bw =new BufferedWriter(fw);
-            PrintWriter  pw = new PrintWriter(bw);
-            pw.printf(pairedt_test,H0,H1,dof,alpha,paired_Tstat,critical_value[3],pvalue[3]);
-            
-            pw.close();        
-          }catch(IOException  ioe){
-                     System.out.println("Error  occured:");
-                     ioe.printStackTrace();
-         }  
-    }
-        
-        
-         
-    if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
-    {
-        String  t2_test="\r\nNull Hypothesis   %s"
-            + "\r\nAlternative Hypothesis   %s"
-            + "\r\ndf   %s"
-            + "\r\na.l.o.s   %s"
-            + "\r\n2 Sample T value    %s"
-            + "\r\nCritical value   %s"
-            + "\r\n p-value   %s";
-        
-          try{
-                 File  t2_testFile;   
-                   t2_testFile =new File("2Sample_test.txt");
-                   if(!t2_testFile.exists()){
-                       t2_testFile.createNewFile();
-                 }   
-            FileWriter  fw=  new FileWriter(t2_testFile,true);
-            BufferedWriter  bw =new BufferedWriter(fw);
-            PrintWriter  pw = new PrintWriter(bw);
-            pw.printf(t2_test,H0,H1,dof,alpha,  tStar ,critical_value[2],pvalue[2]);
-            pw.close();        
-         }catch(IOException  ioe){
-                     System.out.println("Error  occured:");
-                     ioe.printStackTrace();
-         }  }
-        
-        
-        
-        
-    
-    
-    
-      if(t_Test & tTestPane.isShowing() )
-         {
-             String  t_test="\r\nNull Hypothesis   %s"
-            + "\r\nAlternative Hypothesis   %s"
-            + "\r\ndf   %s"
-            + "\r\na.l.o.s   %s"
-            + "\r\nT value    %s"
-            + "\r\nCritical value   %s"
-            + "\r\n p-value   %s";
-
-          try{
-                 File  t_testFile;   
-                   t_testFile =new File("t_test.txt");
-                   if(!t_testFile.exists()){
-                       t_testFile.createNewFile();
-                 }   
-            FileWriter  fw=  new FileWriter(t_testFile,true);
-            BufferedWriter  bw =new BufferedWriter(fw);
-            PrintWriter  pw = new PrintWriter(bw);
-            pw.printf(t_test,H0,H1,df,alpha,ttest,critical_value[1],pvalue[1]);
-            pw.close();        
-         }catch(IOException  ioe){
-                     System.out.println("Error  occured:");
-                     ioe.printStackTrace();
-                }
- 
-       
-       
-        if(ChiSquarePane.isShowing() &&  chi_squared)
-        
-        {
-        String  chitest="\r\nNull Hypothesis   %s"
-            + "\r\nAlternative Hypothesis   %s"
-            + "\r\ndf   %s"
-            + "\r\na.l.o.s   %s"
-            + "\r\nChi value    %f"
-            + "\r\nCritical value   %f"
-            + "\r\np-value   %f";
-        
-          try{
-                 File  ChitestFile;   
-                   ChitestFile =new File("chisquaredtest.txt");
-                   if(!ChitestFile.exists()){
-                       ChitestFile.createNewFile();
-                 }   
-            FileWriter  fw=  new FileWriter(ChitestFile,true);
-            BufferedWriter  bw =new BufferedWriter(fw);
-            PrintWriter  pw = new PrintWriter(bw);
-             pw.printf(chitest,H0,H1,df,alpha,chisquareVal,critical_value[0],pvalue[0]);
-            pw.close();        
-         }catch(IOException  ioe){
-                     System.out.println("Error  occured:");
-                     ioe.printStackTrace();
-         }     
-             
-         }
-             
-        }
-            
-            
-    }//GEN-LAST:event_jSaveActionPerformed
-
-    private void jClearResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jClearResultsActionPerformed
-         jH0EdFeild.setText("    ");
-      jH1EditFeild.setText( "   ");
-      col1.setText("   ");
-     col2.setText("   ");
-    clear_table();
-    
-        if(ChiSquarePane.isShowing() &&  chi_squared)
-        {
-    alphaDisplay.setText("   ");
-       critical_value[0]=0.0;
-        jChiValueDisplay.setText( "    ");
-       jCriticalDisplay.setText("    ");
-           
-             
-        }
-        
-       if(GtestPane.isShowing() &&  Gtest)
-        {
-        pvalue[8]=0.0;
-       critical_value[8]=0.0;
-         Gtestval.setText("  ");
-        G_alpha.setText("   ");
-           alpha=0.0;  
-        }
-        
-        
-          if(tTestPane.isShowing()   &&  t_Test)
-        {
-                      t_alos.setText("   ");            
-                      T_test.setText("     ");
-                      t_pval.setText("      ");                              
-                        critical_value[1]=0.0;
-                        pvalue[1]=0.0;
-                      testsign.setText("    ");
-                      H1testsign.setText("    ");
-                      
-             
-        }
-        if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
-    {
-                         ALOS_tSample.setText("   ");
-                       twoSampleT.setText("   ");
-                       HO2Test.setText("   ");
-                       H12Test.setText("    ");
-                       jDOF2Display.setText("      ");
-                       pvalue[2]=0.0;
-                       critical_value[2]=0.0;
-                       TwoTest_pval.setText("    ");
-    }
-        
-    if(Paired_tTestPanel.isShowing()   &&  paired_t)
-    {
-    
-      pairedT_H0.setText("    ");
-     pairedT_H1.setText("   ");     
-      pairedTValue.setText("    ");
-             ALOSPairedt.setText("     ");
-          pairedT_df.setText("     ");
-    pvalue[3]=0.0;
-    critical_value[3]=0.0;
-     pairedT_pval.setText("      ");
-    }
-      
-     if(FTestPane.isShowing() && Ftest  )
-     {
-      F_alpha.setText("    ");
-              F_Test.setText("    "); 
-              F_crit.setText("     ");
-              f_df1.setText("     ");
-              F_df2.setText("    ");
-      pvalue[7]=0.0;
-    critical_value[7]=0.0;
-      critical_value[6]=0.0;
-       critical_value[5]=0.0;
-     }
-    
-    
-    
-        
-    }//GEN-LAST:event_jClearResultsActionPerformed
-
     private void jTestTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestTypeActionPerformed
        
         Object jTestTypeObj =  jTestType.getSelectedItem();
@@ -10552,6 +10211,310 @@ Remove(1);
           }
           
     }//GEN-LAST:event_jTwoSampleVarianceRadioButActionPerformed
+
+    private void jSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSaveActionPerformed
+
+        if(FTestPane.isShowing() && Ftest  )
+        {
+            String  ftest="\r\nNull Hypothesis   %s"
+            + "\r\nAlternative Hypothesis   %s"
+            + "\r\n  df1   %s"
+            + "\r\n df2 %s"
+            + "\r\n a.l.o.s   %s"
+            + "\r\n F  test value    %s"
+            + "\r\nCritical value   %s"
+            + "\r\n p-value   %s";
+
+            try{
+                File F_test;
+                F_test =new File("Ftest.txt");
+                if(!F_test.exists()){
+                    F_test.createNewFile();
+                }
+
+                FileWriter  fw=  new FileWriter(F_test,true);
+                BufferedWriter  bw =new BufferedWriter(fw);
+                PrintWriter  pw = new PrintWriter(bw);
+                pw.printf(ftest,H0,H1,df1,df2,alpha,Ftest,critical_value[7],pvalue[7]);
+                pw.close();
+            }catch(IOException  ioe){
+                System.out.println("Error  occured:");
+                ioe.printStackTrace();
+            }
+
+        }
+
+        if(OneSampleVariancePane.isShowing()  &&  one_sample)
+        {
+            String  vartest="\r\nNull Hypothesis   %s"
+            + "\r\nAlternative Hypothesis   %s"
+            + "\r\n  N  %s"
+            + "\r\n a.l.o.s   %s"
+            + "\r\n 1- Sample Variance value    %s"
+            + "\r\nCritical value   %s"
+            + "\r\n p-value   %s";
+            try{
+                File var_test;
+                var_test =new File("vartest.txt");
+                if(!var_test.exists()){
+                    var_test.createNewFile();
+                }
+
+                FileWriter  fw=  new FileWriter(var_test,true);
+                BufferedWriter  bw =new BufferedWriter(fw);
+                PrintWriter  pw = new PrintWriter(bw);
+                pw.printf(vartest,H0,H1,n,alpha,_var,critical_value[4],pvalue[4]);
+                pw.close();
+            }catch(IOException  ioe){
+                System.out.println("Error  occured:");
+                ioe.printStackTrace();
+            }
+        }
+
+        if(Paired_tTestPanel.isShowing()   &&  paired_t)
+        {
+
+            String  pairedt_test="\r\nNull Hypothesis   %s"
+            + "\r\nAlternative Hypothesis   %s"
+            + "\r\ndf   %s"
+            + "\r\n a.l.o.s   %s"
+            + "\r\n Paired- T value    %s"
+            + "\r\nCritical value   %s"
+            + "\r\n p-value   %s";
+            try{
+                File  pairedt_testFile;
+                pairedt_testFile =new File("pairedT.txt");
+                if(!pairedt_testFile.exists()){
+                    pairedt_testFile.createNewFile();
+                }
+                FileWriter  fw=  new FileWriter(pairedt_testFile,true);
+                BufferedWriter  bw =new BufferedWriter(fw);
+                PrintWriter  pw = new PrintWriter(bw);
+                pw.printf(pairedt_test,H0,H1,dof,alpha,paired_Tstat,critical_value[3],pvalue[3]);
+
+                pw.close();
+            }catch(IOException  ioe){
+                System.out.println("Error  occured:");
+                ioe.printStackTrace();
+            }
+        }
+
+        if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
+        {
+            String  t2_test="\r\nNull Hypothesis   %s"
+            + "\r\nAlternative Hypothesis   %s"
+            + "\r\ndf   %s"
+            + "\r\na.l.o.s   %s"
+            + "\r\n2 Sample T value    %s"
+            + "\r\nCritical value   %s"
+            + "\r\n p-value   %s";
+
+            try{
+                File  t2_testFile;
+                t2_testFile =new File("2Sample_test.txt");
+                if(!t2_testFile.exists()){
+                    t2_testFile.createNewFile();
+                }
+                FileWriter  fw=  new FileWriter(t2_testFile,true);
+                BufferedWriter  bw =new BufferedWriter(fw);
+                PrintWriter  pw = new PrintWriter(bw);
+                pw.printf(t2_test,H0,H1,dof,alpha,  tStar ,critical_value[2],pvalue[2]);
+                pw.close();
+            }catch(IOException  ioe){
+                System.out.println("Error  occured:");
+                ioe.printStackTrace();
+            }  }
+
+            if(t_Test & tTestPane.isShowing() )
+            {
+                String  t_test="\r\nNull Hypothesis   %s"
+                + "\r\nAlternative Hypothesis   %s"
+                + "\r\ndf   %s"
+                + "\r\na.l.o.s   %s"
+                + "\r\nT value    %s"
+                + "\r\nCritical value   %s"
+                + "\r\n p-value   %s";
+
+                try{
+                    File  t_testFile;
+                    t_testFile =new File("t_test.txt");
+                    if(!t_testFile.exists()){
+                        t_testFile.createNewFile();
+                    }
+                    FileWriter  fw=  new FileWriter(t_testFile,true);
+                    BufferedWriter  bw =new BufferedWriter(fw);
+                    PrintWriter  pw = new PrintWriter(bw);
+                    pw.printf(t_test,H0,H1,df,alpha,ttest,critical_value[1],pvalue[1]);
+                    pw.close();
+                }catch(IOException  ioe){
+                    System.out.println("Error  occured:");
+                    ioe.printStackTrace();
+                }
+
+                if(ChiSquarePane.isShowing() &&  chi_squared)
+
+                {
+                    String  chitest="\r\nNull Hypothesis   %s"
+                    + "\r\nAlternative Hypothesis   %s"
+                    + "\r\ndf   %s"
+                    + "\r\na.l.o.s   %s"
+                    + "\r\nChi value    %f"
+                    + "\r\nCritical value   %f"
+                    + "\r\np-value   %f";
+
+                    try{
+                        File  ChitestFile;
+                        ChitestFile =new File("chisquaredtest.txt");
+                        if(!ChitestFile.exists()){
+                            ChitestFile.createNewFile();
+                        }
+                        FileWriter  fw=  new FileWriter(ChitestFile,true);
+                        BufferedWriter  bw =new BufferedWriter(fw);
+                        PrintWriter  pw = new PrintWriter(bw);
+                        pw.printf(chitest,H0,H1,df,alpha,chisquareVal,critical_value[0],pvalue[0]);
+                        pw.close();
+                    }catch(IOException  ioe){
+                        System.out.println("Error  occured:");
+                        ioe.printStackTrace();
+                    }
+
+                }
+
+            }
+    }//GEN-LAST:event_jSaveActionPerformed
+
+    private void jClearResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jClearResultsActionPerformed
+        jH0EdFeild.setText("    ");
+        jH1EditFeild.setText( "   ");
+        col1.setText("   ");
+        col2.setText("   ");
+        clear_table();
+
+        if(ChiSquarePane.isShowing() &&  chi_squared)
+        {
+            alphaDisplay.setText("   ");
+            critical_value[0]=0.0;
+            jChiValueDisplay.setText( "    ");
+            jCriticalDisplay.setText("    ");
+
+        }
+
+        if(GtestPane.isShowing() &&  Gtest)
+        {
+            pvalue[8]=0.0;
+            critical_value[8]=0.0;
+            Gtestval.setText("  ");
+            G_alpha.setText("   ");
+            alpha=0.0;
+        }
+
+        if(tTestPane.isShowing()   &&  t_Test)
+        {
+            t_alos.setText("   ");
+            T_test.setText("     ");
+            t_pval.setText("      ");
+            critical_value[1]=0.0;
+            pvalue[1]=0.0;
+            testsign.setText("    ");
+            H1testsign.setText("    ");
+
+        }
+        if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
+        {
+            ALOS_tSample.setText("   ");
+            twoSampleT.setText("   ");
+            HO2Test.setText("   ");
+            H12Test.setText("    ");
+            jDOF2Display.setText("      ");
+            pvalue[2]=0.0;
+            critical_value[2]=0.0;
+            TwoTest_pval.setText("    ");
+        }
+
+        if(Paired_tTestPanel.isShowing()   &&  paired_t)
+        {
+
+            pairedT_H0.setText("    ");
+            pairedT_H1.setText("   ");
+            pairedTValue.setText("    ");
+            ALOSPairedt.setText("     ");
+            pairedT_df.setText("     ");
+            pvalue[3]=0.0;
+            critical_value[3]=0.0;
+            pairedT_pval.setText("      ");
+        }
+
+        if(FTestPane.isShowing() && Ftest  )
+        {
+            F_alpha.setText("    ");
+            F_Test.setText("    ");
+            F_crit.setText("     ");
+            f_df1.setText("     ");
+            F_df2.setText("    ");
+            pvalue[7]=0.0;
+            critical_value[7]=0.0;
+            critical_value[6]=0.0;
+            critical_value[5]=0.0;
+        }
+    }//GEN-LAST:event_jClearResultsActionPerformed
+
+    private void NULLTextDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NULLTextDisplayActionPerformed
+
+        NULLTextDisplay.setText(H0);
+    }//GEN-LAST:event_NULLTextDisplayActionPerformed
+
+    private void StatsTableFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_StatsTableFocusGained
+        String  header,header2,header0,h3,h4,h5;
+        int  cols;
+
+        col3.setEditable(false);
+        col4.setEditable(false);
+        col5.setEditable(false);
+
+        Treatment.setEditable(false);
+
+        StatsTable.setShowGrid(true);
+        int rows=StatsTable.getRowCount();
+
+        for(int i = 0; i<rows;++i)
+        {StatsTable.setValueAt(i+1, i,0);
+
+        }
+
+        StatsTable.setGridColor(java.awt.Color.black);
+
+        if( Ftest==true  || TwoSampleT==true||paired_t==true|| U_Test==true)
+        {
+            header=col1.getText();
+            header2=col2.getText();
+            StatsTable.getColumnModel().getColumn(2).setHeaderValue(header);
+            StatsTable.getColumnModel().getColumn(3).setHeaderValue(header2);
+        }
+
+        if(chi_squared==true   ||  Gtest==true)
+        {
+            Treatment.setEditable(true);
+            header0=Treatment.getText();
+            header=col1.getText();
+            header2=col2.getText();
+            StatsTable.getColumnModel().getColumn(1).setHeaderValue(header0);
+            StatsTable.getColumnModel().getColumn(2).setHeaderValue(header);
+            StatsTable.getColumnModel().getColumn(3).setHeaderValue(header2);
+        }
+
+        if(t_Test==true ||  one_sample==true)
+        {
+            Treatment.setEditable(false);
+            col2.setEditable(false);
+            header=col1.getText();
+            StatsTable.getColumnModel().getColumn(2).setHeaderValue(header);
+            StatsTable.getColumnModel().getColumn(1).setHeaderValue(header);
+        }
+
+        StatsTable.repaint();
+
+        setColumns();
+    }//GEN-LAST:event_StatsTableFocusGained
       
     
     /**
