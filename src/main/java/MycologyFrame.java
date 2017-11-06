@@ -9842,7 +9842,7 @@ Remove(1);
              } 
                  
                  
-              String j2tailstatement = String.format("Since %2.3f <=%2.3f<= %2.3f",LBcv,var,UBcv);
+              String j2tailstatement = String.format("Since %2.3f <=%2.3f<= %2.3f, we cannot reject the Null Hypothesis",LBcv,var,UBcv);
                   statement.setText(j2tailstatement);
              }
                 
