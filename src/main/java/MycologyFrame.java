@@ -742,7 +742,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         var_alpha = new javax.swing.JTextField();
         var_ts = new javax.swing.JTextField();
         var_cv = new javax.swing.JTextField();
-        jLabel162 = new javax.swing.JLabel();
         var_p = new javax.swing.JTextField();
         var_H0 = new javax.swing.JTextField();
         var_H1 = new javax.swing.JTextField();
@@ -757,7 +756,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         jLabel194 = new javax.swing.JLabel();
         varCrit = new javax.swing.JLabel();
         jLabel205 = new javax.swing.JLabel();
-        jLabel109 = new javax.swing.JLabel();
         var_opt1 = new javax.swing.JTextField();
         jClearResults = new javax.swing.JButton();
         jSave = new javax.swing.JButton();
@@ -6200,11 +6198,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         var_cv.setEditable(false);
         var_cv.setText("jTextField4");
 
-        jLabel162.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel162.setForeground(new java.awt.Color(17, 6, 6));
-        jLabel162.setText("p-value");
-        jLabel162.setBorder(new javax.swing.border.MatteBorder(null));
-
         var_p.setText("jTextField2");
 
         var_H0.setEditable(false);
@@ -6254,8 +6247,6 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         jLabel205.setForeground(new java.awt.Color(35, 5, 5));
         jLabel205.setText("p-value");
         jLabel205.setBorder(new javax.swing.border.MatteBorder(null));
-
-        jLabel109.setText("jLabel109");
 
         var_opt1.setText("jTextField4");
 
@@ -6319,27 +6310,20 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                         .addComponent(jLabel193, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
                         .addGap(86, 86, 86)
-                        .addComponent(statement, javax.swing.GroupLayout.PREFERRED_SIZE, 566, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel151, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(var_alpha_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(statement, javax.swing.GroupLayout.PREFERRED_SIZE, 566, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
-                        .addComponent(var_alpha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
-                        .addComponent(jLabel163, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel164, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel162, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel151, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(var_alpha_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(var_alpha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
+                                .addComponent(jLabel163, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel164, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         OneSampleVariancePaneLayout.setVerticalGroup(
             OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6364,8 +6348,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                     .addGroup(OneSampleVariancePaneLayout.createSequentialGroup()
                         .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel151)
-                            .addComponent(var_alpha_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel162, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(var_alpha_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(size, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -6390,9 +6373,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel193, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(OneSampleVariancePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel109, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(statement, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(statement, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -9284,10 +9265,10 @@ Remove(1);
                        TDistribution t = new TDistribution(df-1);
                        if( j2tailed==true )
                        critical_value[1]=2*t.inverseCumulativeProbability(1- (2*alpha/2));
-                        
+                        NullOption="<=";
                           if(NullOption.equals("<= "))
                               critical_value[1]=t.inverseCumulativeProbability(1- alpha);
-                           
+                           NullOption=">=";
                            if( NullOption.equals(">=") )
                               critical_value[1]=t.inverseCumulativeProbability(alpha);
                     
@@ -9817,16 +9798,17 @@ Remove(1);
                         n=sample.length;
                        num= (n-1)*Stats.getVariance();
                        var= num/Stats.getStandardDeviation(); 
-            if( NullTestOption.equals( "<=")    &&    j2tailed==false )
+                       
+            NullTestOption="<=";           
+            if( NullTestOption.equals( "<=") )
             {
-       
-              
+      
            ChiSquaredDistribution chisquared=  new ChiSquaredDistribution(n-1,1-alpha);
                     critical_value[4]=chisquared.inverseCumulativeProbability(1-alpha);
                     pvalue[4]= 1-chisquared.cumulativeProbability(critical_value[4]);
            
            }
-             
+            NullTestOption=">=";
               if( NullTestOption.equals( ">=")   &&    j2tailed==false )
             {
          
@@ -10857,7 +10839,6 @@ Remove(1);
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
-    private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
@@ -10904,7 +10885,6 @@ Remove(1);
     private javax.swing.JLabel jLabel158;
     private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel165;
