@@ -9831,8 +9831,8 @@ Remove(1);
               beta=1-(alpha/2);
              ChiSquaredDistribution LB =  new ChiSquaredDistribution(n-1,alpha/2);
              ChiSquaredDistribution UB =  new ChiSquaredDistribution(n-1,beta);
-              LBcv = LB.inverseCumulativeProbability(alpha/2);
-               UBcv = UB.inverseCumulativeProbability(beta);
+              LBcv = ((n-1)*Stats.getVariance())/LB.inverseCumulativeProbability(alpha/2);
+              UBcv =  ((n-1)*Stats.getVariance())/UB.inverseCumulativeProbability(beta);
              
              if(var <LBcv  ||var> UBcv)
              {critical_value[4]=LBcv;
