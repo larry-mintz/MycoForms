@@ -5682,8 +5682,10 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         jTextField3.setText("jTextField3");
 
+        F_H0_sign.setEditable(false);
         F_H0_sign.setText("jTextField4");
 
+        F_H1_sign.setEditable(false);
         F_H1_sign.setText("jTextField5");
 
         javax.swing.GroupLayout FTestPaneLayout = new javax.swing.GroupLayout(FTestPane);
@@ -7004,10 +7006,13 @@ Remove(1);
  
  if(TwoSampleT==true    ||  Ftest==true   || paired_t==true|| U_Test==true)
  {
-    
-      for(int i=2;i<=StatsTable.getColumnCount();++i)    
-          {Remove(4);}
-      Remove(1);
+   StatsTable.moveColumn(1, 6);
+   Remove(6);
+   
+     for(int i=1;i<StatsTable.getColumnCount();++i)    
+        {
+            Remove(3);}
+      
    
     
     
@@ -9687,7 +9692,7 @@ Remove(1);
                F_H1.setText(H1);
                
                    
-                  if( NullOption.equals(">="  ) )
+                  if( NullTestOption.equals(">="  ) )
                   {    NullOption=">=";
                        ATO="<";
                           critical_value[7]=f.inverseCumulativeProbability(alpha);
@@ -9695,11 +9700,12 @@ Remove(1);
                         F_criteria.setText(criteria);
                         F_H0_sign.setText(NullOption);
                         F_H1_sign.setText(ATO);
-                         
+                          String _fcrit =String.format("%5.3f",critical_value[7]);
+                          F_crit.setText(_fcrit);
                   }
                   
                      
-                     if( NullOption.equals("<=") ){
+                     if( NullTestOption.equals("<=") ){
                           NullOption="<=";
                           ATO=">";
                           critical_value[7]=f.inverseCumulativeProbability(1-alpha);
@@ -9726,7 +9732,8 @@ Remove(1);
                            F_H1_sign.setText(ATO);
                      }
                       F_alpha.setText(Double.toString(alpha));
-             
+                        String _ftest= String.format("%5.3f",Ftest);
+                      F_Test.setText(_ftest);
               f_df1.setText(Integer.toString(s1.length-1));
               F_df2.setText(Integer.toString(s2.length-1));
                      
@@ -9735,7 +9742,7 @@ Remove(1);
                   String desc= String.format("Since %5.3f   >= %5.3f,we  accept H0",Ftest,critical_value[7]); 
                   String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
                    F_pvalue.setText(pval2);
-                   
+                    F_result.setText(desc);
                      
                   }
            
@@ -9745,7 +9752,7 @@ Remove(1);
                   String desc= String.format("Since %5.3f< %5.3f,we  reject H0",Ftest,critical_value[7]); 
                    String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
                    F_pvalue.setText(pval2);
-                     
+                      F_result.setText(desc);
                   
                   }
                   
@@ -9761,7 +9768,7 @@ Remove(1);
                 if((v/v1)>critical_value[7] &&   j1Tailed==true)
                 {   pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
                   String desc2= String.format("Since %5.3f > %5.3f ,we  reject H0",Ftest,critical_value[7]); 
-              
+              F_result.setText(desc2);
                               
                 }
                              
@@ -9774,11 +9781,11 @@ Remove(1);
                     String desc3= String.format("Since %5.3f  =<F<= %5.3f,we  accept H0",critical_value[5],critical_value[6]); 
                      String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
                    F_pvalue.setText(pval2);
+                   F_result.setText(desc3);
                   }
                   
-                
-                String _ftest= String.format("%5.3f",Ftest); 
-                String _fcrit =String.format("%5.3f",critical_value[7]);
+               
+               
               
             
             
