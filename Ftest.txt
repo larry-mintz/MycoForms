@@ -1,9 +1,0 @@
-
-Null Hypothesis   null
-Alternative Hypothesis   null
-  df1   0
- df2 0
- a.l.o.s   0.025
- F  test value    true
-Critical value   7.146381828732844
- p-value   1.0
