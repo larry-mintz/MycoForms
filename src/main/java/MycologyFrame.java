@@ -684,8 +684,8 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         F_pvalue = new javax.swing.JTextField();
         F_result = new javax.swing.JLabel();
         jLabel182 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        F_H0 = new javax.swing.JTextField();
+        F_H1 = new javax.swing.JTextField();
         F_criteria = new javax.swing.JLabel();
         jLabel174 = new javax.swing.JLabel();
         jLabel146 = new javax.swing.JLabel();
@@ -693,8 +693,8 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         jLabel171 = new javax.swing.JLabel();
         jLabel172 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        F_testsign = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        F_H0_sign = new javax.swing.JTextField();
+        F_H1_sign = new javax.swing.JTextField();
         tTestPane = new javax.swing.JPanel();
         jLabel115 = new javax.swing.JLabel();
         jLabel116 = new javax.swing.JLabel();
@@ -5654,9 +5654,9 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         jLabel182.setText("         Result");
         jLabel182.setBorder(new javax.swing.border.MatteBorder(null));
 
-        jTextField1.setText("jTextField1");
+        F_H0.setText("jTextField1");
 
-        jTextField2.setText("jTextField2");
+        F_H1.setText("jTextField2");
 
         F_criteria.setText("jLabel165");
 
@@ -5682,9 +5682,9 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         jTextField3.setText("jTextField3");
 
-        F_testsign.setText("jTextField4");
+        F_H0_sign.setText("jTextField4");
 
-        jTextField5.setText("jTextField5");
+        F_H1_sign.setText("jTextField5");
 
         javax.swing.GroupLayout FTestPaneLayout = new javax.swing.GroupLayout(FTestPane);
         FTestPane.setLayout(FTestPaneLayout);
@@ -5701,16 +5701,16 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                             .addGroup(FTestPaneLayout.createSequentialGroup()
                                 .addComponent(jLabel180, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(F_H0, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33))
                             .addGroup(FTestPaneLayout.createSequentialGroup()
                                 .addComponent(jLabel181, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(F_H1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31)))
                         .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FTestPaneLayout.createSequentialGroup()
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(F_H1_sign, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(72, 72, 72))
                             .addGroup(FTestPaneLayout.createSequentialGroup()
                                 .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5720,7 +5720,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                                         .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(FTestPaneLayout.createSequentialGroup()
-                                                .addComponent(F_testsign, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(F_H0_sign, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel171, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(FTestPaneLayout.createSequentialGroup()
@@ -5786,17 +5786,17 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                 .addGap(3, 3, 3)
                 .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel180, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(F_H0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel146, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel171, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(F_testsign, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(F_H0_sign, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel165, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel172, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(F_H1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel181, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(F_H1_sign, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -9639,30 +9639,32 @@ Remove(1);
      
       if(FTestPane.isShowing() && Ftest  )
            {
-                double s1[]={5.6,45,3,4,2,3};  
-                  double s2[]={23,45,3,4,555,3};
+                double s1[]=new double[1000];
+                  double s2[]=new double[1000];
                   double  v,v1,sd,sd1,Ftest,L,U;
-                  double   f1[]= new  double[6];
-                  double  f2[]= new  double[6];
+                  double   f1[]= new  double[1000];
+                  double  f2[]= new  double[1000];
                   
             try{
        for(int i=0;  i<=5;++i)
     {if (StatsTable.getValueAt(i,0) != null)
-      {f1[i]=Double.parseDouble(StatsTable.getValueAt(i, 2).toString() );
-      f2[i]= Double.parseDouble(StatsTable.getValueAt(i, 3).toString() );
-       
+      {f1[i]=Double.parseDouble(StatsTable.getValueAt(i, 1).toString() );
+      f2[i]= Double.parseDouble(StatsTable.getValueAt(i, 2).toString() );
+       ++df1;
+       ++df2;
       }
     
      }
        
       }catch(Exception e)   {simplelogger(e);
-      JOptionPane.showMessageDialog(null,"Input error: see err.log  for more info.");
+      //JOptionPane.showMessageDialog(null,"Input error: see err.log  for more info.");
      
       }
                
-        s1 = Arrays.copyOf(f1,f1.length) ;
-        s2  = Arrays.copyOf(f2,f2.length);
-      
+        s1 = Arrays.copyOf(f1,df1) ;
+        s2  = Arrays.copyOf(f2,df2);
+        
+       
                         
                   SummaryStatistics ftest = new SummaryStatistics();
                        for (int i = 0; i < s1.length; i++) 
@@ -9679,27 +9681,40 @@ Remove(1);
              FDistribution  f=   new FDistribution(s1.length-1,s2.length-1);
                FDistribution  f_UB=   new FDistribution(s1.length-1,s2.length-1);
                 FDistribution  f_LB=   new FDistribution(s1.length-1,s2.length-1);
-                
-                   NullOption=">=";
+                H0=jH0EdFeild.getText();
+                H1=jH1EditFeild.getText();
+               F_H0.setText(H0);
+               F_H1.setText(H1);
+               
+                   
                   if( NullOption.equals(">="  ) )
-                  {
+                  {    NullOption=">=";
+                       ATO="<";
                           critical_value[7]=f.inverseCumulativeProbability(alpha);
                          String criteria = String.format("F>=%5.3f",critical_value[7]);
                         F_criteria.setText(criteria);
+                        F_H0_sign.setText(NullOption);
+                        F_H1_sign.setText(ATO);
                          
                   }
                   
-                     NullOption="<=";
+                     
                      if( NullOption.equals("<=") ){
+                          NullOption="<=";
+                          ATO=">";
                           critical_value[7]=f.inverseCumulativeProbability(1-alpha);
                              String criteria1= String.format("F<=%5.3f",critical_value[7]);
                          F_criteria.setText(criteria1);
+                           F_H0_sign.setText(NullOption);
+                           F_H1_sign.setText(ATO);
                      }
                      
                      
                      
                         if( j2tailed == true )
                         {
+                            NullOption="=";
+                          ATO="<>";
                      critical_value[5]=f_LB.inverseCumulativeProbability(alpha/2);
                    critical_value[6]=f_LB.inverseCumulativeProbability(1-(alpha/2));
                     L=(v/v1)*(1.0/critical_value[6]);
@@ -9707,8 +9722,13 @@ Remove(1);
                          String crit3= String.format("%5.3f<=F<=%5.3f",critical_value[6],critical_value[5]);
                          F_criteria.setText(crit3);
                          critical_value[7]=critical_value[5];
+                           F_H0_sign.setText(NullOption);
+                           F_H1_sign.setText(ATO);
                      }
-                     
+                      F_alpha.setText(Double.toString(alpha));
+             
+              f_df1.setText(Integer.toString(s1.length-1));
+              F_df2.setText(Integer.toString(s2.length-1));
                      
                   if((v/v1)>=critical_value[7] &&   j1Tailed==true)
                   {pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
@@ -9759,11 +9779,7 @@ Remove(1);
                 
                 String _ftest= String.format("%5.3f",Ftest); 
                 String _fcrit =String.format("%5.3f",critical_value[7]);
-               F_alpha.setText(Double.toString(alpha));
-              F_Test.setText(_ftest); 
-              F_crit.setText(_fcrit);
-              f_df1.setText(Integer.toString(s1.length-1));
-              F_df2.setText(Integer.toString(s2.length-1));
+              
             
             
            }
@@ -10560,6 +10576,10 @@ Remove(1);
     private javax.swing.JPanel ChiSquarePane;
     private javax.swing.JTextField DOFDisplay;
     private javax.swing.JPanel FTestPane;
+    private javax.swing.JTextField F_H0;
+    private javax.swing.JTextField F_H0_sign;
+    private javax.swing.JTextField F_H1;
+    private javax.swing.JTextField F_H1_sign;
     private javax.swing.JTextField F_Test;
     private javax.swing.JTextField F_alpha;
     private javax.swing.JTextField F_crit;
@@ -10570,7 +10590,6 @@ Remove(1);
     private javax.swing.JLabel F_test_label;
     private javax.swing.JLabel F_test_label1;
     private javax.swing.JLabel F_test_label3;
-    private javax.swing.JTextField F_testsign;
     private javax.swing.JTextField GAlt;
     private javax.swing.JTextField GHypo;
     private javax.swing.JTextField G_alpha;
@@ -11092,10 +11111,7 @@ Remove(1);
     private javax.swing.JComboBox<String> jStalkCharSurfOrnCB;
     private javax.swing.JComboBox<String> jTestType;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JRadioButton jTwoSampleVarianceRadioBut;
     private javax.swing.JRadioButton jUTestRadioBut;
     private javax.swing.JRadioButton jVarianceRadioBut;

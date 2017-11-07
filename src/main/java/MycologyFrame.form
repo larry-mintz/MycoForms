@@ -8264,19 +8264,19 @@
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel180" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                                  <Component id="jTextField1" min="-2" pref="89" max="-2" attributes="0"/>
+                                                  <Component id="F_H0" min="-2" pref="89" max="-2" attributes="0"/>
                                                   <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel181" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jTextField2" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  <Component id="F_H1" min="-2" pref="85" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jTextField5" min="-2" pref="46" max="-2" attributes="0"/>
+                                                  <Component id="F_H1_sign" min="-2" pref="46" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
@@ -8287,7 +8287,7 @@
                                                           <Group type="103" groupAlignment="0" attributes="0">
                                                               <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
                                                               <Group type="102" attributes="0">
-                                                                  <Component id="F_testsign" min="-2" pref="31" max="-2" attributes="0"/>
+                                                                  <Component id="F_H0_sign" min="-2" pref="31" max="-2" attributes="0"/>
                                                                   <EmptySpace max="-2" attributes="0"/>
                                                                   <Component id="jLabel171" min="-2" pref="39" max="-2" attributes="0"/>
                                                               </Group>
@@ -8381,18 +8381,18 @@
                                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel180" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="F_H0" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel146" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                       <Component id="jLabel171" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="F_testsign" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="F_H0_sign" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel165" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                       <Component id="jLabel172" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="F_H1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel181" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="F_H1_sign" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -8651,12 +8651,12 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField1">
+                        <Component class="javax.swing.JTextField" name="F_H0">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jTextField1"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField2">
+                        <Component class="javax.swing.JTextField" name="F_H1">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jTextField2"/>
                           </Properties>
@@ -8726,12 +8726,12 @@
                             <Property name="text" type="java.lang.String" value="jTextField3"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="F_testsign">
+                        <Component class="javax.swing.JTextField" name="F_H0_sign">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jTextField4"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField5">
+                        <Component class="javax.swing.JTextField" name="F_H1_sign">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jTextField5"/>
                           </Properties>
