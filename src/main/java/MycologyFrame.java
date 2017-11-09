@@ -4394,7 +4394,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Long.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
                 false, true, true, true, true, true, true
@@ -4411,6 +4411,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         StatsTable.setColumnSelectionAllowed(true);
         StatsTable.setGridColor(new java.awt.Color(1, 1, 11));
         StatsTable.setOpaque(false);
+        StatsTable.getTableHeader().setReorderingAllowed(false);
         StatsTable.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 StatsTableFocusGained(evt);
@@ -4418,6 +4419,14 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
         });
         jScrollPane7.setViewportView(StatsTable);
         StatsTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        if (StatsTable.getColumnModel().getColumnCount() > 0) {
+            StatsTable.getColumnModel().getColumn(0).setResizable(false);
+            StatsTable.getColumnModel().getColumn(2).setResizable(false);
+            StatsTable.getColumnModel().getColumn(3).setResizable(false);
+            StatsTable.getColumnModel().getColumn(4).setResizable(false);
+            StatsTable.getColumnModel().getColumn(5).setResizable(false);
+            StatsTable.getColumnModel().getColumn(6).setResizable(false);
+        }
 
         StatsWindowPane.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
@@ -7007,14 +7016,14 @@ Remove(1);
  if(TwoSampleT==true    ||  Ftest==true   || paired_t==true|| U_Test==true)
  {
   
-   Remove(1);
+ 
    
-     for(int i=1;i<StatsTable.getColumnCount();++i)    
+     for(int i=2;i<StatsTable.getColumnCount();++i)    
         {
             Remove(3);}
  
      }
- 
+ Remove(1);
  }
 
    protected  void clear_table()
