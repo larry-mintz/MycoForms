@@ -4390,7 +4390,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "", "Treatment", "Col  1/obs", "col  2/ expected", "ranked obs", "ranked obs", "ranked obs"
+                "", "Treatment", "obs", "obs", " obs", "obs", " obs"
             }
         ) {
             Class[] types = new Class [] {
@@ -7006,32 +7006,12 @@ Remove(1);
  
  if(TwoSampleT==true    ||  Ftest==true   || paired_t==true|| U_Test==true)
  {
-   StatsTable.moveColumn(1, 6);
-   Remove(6);
+  
+   Remove(1);
    
      for(int i=1;i<StatsTable.getColumnCount();++i)    
         {
             Remove(3);}
-      
-   
-    
-    
-  
-  
-  
-  
-    
-  
-         
-
- 
-      
- 
- 
- 
-
-  
- 
  
      }
  

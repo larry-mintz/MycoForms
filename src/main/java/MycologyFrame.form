@@ -5939,11 +5939,11 @@
                           <Table columnCount="7" rowCount="10">
                             <Column editable="false" title="" type="java.lang.Integer"/>
                             <Column editable="true" title="Treatment" type="java.lang.String"/>
-                            <Column editable="true" title="Col  1/obs" type="java.lang.Long"/>
-                            <Column editable="true" title="col  2/ expected" type="java.lang.Double"/>
-                            <Column editable="true" title="ranked obs" type="java.lang.Double"/>
-                            <Column editable="true" title="ranked obs" type="java.lang.Double"/>
-                            <Column editable="true" title="ranked obs" type="java.lang.Double"/>
+                            <Column editable="true" title="obs" type="java.lang.Long"/>
+                            <Column editable="true" title="obs" type="java.lang.Double"/>
+                            <Column editable="true" title=" obs" type="java.lang.Double"/>
+                            <Column editable="true" title="obs" type="java.lang.Double"/>
+                            <Column editable="true" title=" obs" type="java.lang.Double"/>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
