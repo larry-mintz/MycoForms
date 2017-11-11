@@ -6944,13 +6944,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
   StatsTable.removeColumn(tcol);
   }
     
-    protected void checkNulloption()
-{
-     if (  j2tailed == true)
-   {NullOption= "=";
-   ATO="<>";
-   }
-}
+    
     
 
 public  void   simplelogger(Exception  e)
@@ -7001,14 +6995,13 @@ public  void setColumns()
 Remove(4);
 Remove(4);
   }
- if(t_Test==true   || one_sample==true || wilcoxan==true)
+ if(t_Test==true   || one_sample==true ||wilcoxan)
  {
-
-Remove(6);
-Remove(5);
-Remove(4);
 Remove(2);
 Remove(1);
+Remove(1);
+
+
 
  
  }
@@ -9258,15 +9251,30 @@ Remove(1);
                        }
                   
                        TDistribution t = new TDistribution(df-1);
-                       if( j2tailed==true )
-                       critical_value[1]=2*t.inverseCumulativeProbability(1- (2*alpha/2));
-                        NullOption="<=";
+                       if( NullOption.equals("="))
+                       {
+                               testsign.setText("=");
+                      H1testsign.setText(" !=");
+                           critical_value[1]=2*t.inverseCumulativeProbability(1- (2*alpha/2));
+                       }
+                       
+                       
+                       
                           if(NullOption.equals("<= "))
+                          {
                               critical_value[1]=t.inverseCumulativeProbability(1- alpha);
-                           NullOption=">=";
+                                            
+                      testsign.setText("<=");
+                      H1testsign.setText("<");
+                          }
+                          
+                          
                            if( NullOption.equals(">=") )
+                           {
+                                   testsign.setText(">=");
+                      H1testsign.setText(">");
                               critical_value[1]=t.inverseCumulativeProbability(alpha);
-                    
+                           }
                             
                         sdev=Stats.getStandardDeviation();
                         Ybar=Stats.getMean();
@@ -9388,16 +9396,27 @@ Remove(1);
                        TwoTest_pval.setText(Double.toString(pvalue[2]));
                        TDistribution t = new TDistribution(dof);
                    
-                       if(  j2tailed==true )
-                       critical_value[2]=2*t.inverseCumulativeProbability(1- (2*alpha/2));
-                          if( NullTestOption.equals("<=" )   &&    j2tailed==false )
-                             critical_value[2]=t.inverseCumulativeProbability(1- alpha);
-                           if( NullTestOption.equals( ">=") && j2tailed==false )
+                       if(  NullTestOption  == "=" )
+                       {
+                           
+                           testOption.setText("=");
+                           testOpt2.setText("!=");
+                           critical_value[2]=2*t.inverseCumulativeProbability(1- (2*alpha/2));
+                       }
+                          if( NullTestOption.equals("<=" )   )
+                          {
+                                testOption.setText("<=");
+                           testOpt2.setText("<");
+                              critical_value[2]=t.inverseCumulativeProbability(1- alpha);
+                          }
+                           if( NullTestOption.equals( ">=")  )
+                           { 
+                                 testOption.setText(">=");
+                           testOpt2.setText(">");
                              critical_value[2]=t.inverseCumulativeProbability(alpha);
                            
-                 
-                           testOption.setText(NullOption);
-                           testOpt2.setText(ATO);
+                           }
+                         
                            Two_tCritical.setText(Double.toString(critical_value[2]));
                      String  c1=String.format(" t*<= %5.3f",critical_value[2]);
          String  c2=String.format("t* >= %5.3f",critical_value[2]);
@@ -9681,35 +9700,35 @@ Remove(1);
                F_H1.setText(H1);
                
                    
-                  if( NullTestOption.equals(">="  ) )
-                  {    NullOption=">=";
-                       ATO="<";
+                  if( NullTestOption ==">=" )
+                  {   
+                         j1Tailed=true;
                           critical_value[7]=f.inverseCumulativeProbability(alpha);
                          String criteria = String.format("F>=%5.3f",critical_value[7]);
                         F_criteria.setText(criteria);
-                        F_H0_sign.setText(NullOption);
-                        F_H1_sign.setText(ATO);
+                        F_H0_sign.setText(">=");
+                        F_H1_sign.setText(">");
                           String _fcrit =String.format("%5.3f",critical_value[7]);
                           F_crit.setText(_fcrit);
                   }
                   
                      
-                     if( NullTestOption.equals("<=") ){
-                          NullOption="<=";
-                          ATO=">";
+                     if( NullTestOption  == "<=")
+                     {
+                                           
+                          j1Tailed=true;
                           critical_value[7]=f.inverseCumulativeProbability(1-alpha);
                              String criteria1= String.format("F<=%5.3f",critical_value[7]);
                          F_criteria.setText(criteria1);
-                           F_H0_sign.setText(NullOption);
-                           F_H1_sign.setText(ATO);
+                           F_H0_sign.setText("<=");
+                           F_H1_sign.setText("<");
                      }
                      
-                     
-                     
-                        if( j2tailed == true )
+                   
+                       
+                        if( NullTestOption == "=" )
                         {
-                            NullOption="=";
-                          ATO="<>";
+                           
                      critical_value[5]=f_LB.inverseCumulativeProbability(alpha/2);
                    critical_value[6]=f_LB.inverseCumulativeProbability(1-(alpha/2));
                     L=(v/v1)*(1.0/critical_value[6]);
@@ -9717,16 +9736,15 @@ Remove(1);
                          String crit3= String.format("%5.3f<=F<=%5.3f",critical_value[6],critical_value[5]);
                          F_criteria.setText(crit3);
                          critical_value[7]=critical_value[5];
-                           F_H0_sign.setText(NullOption);
-                           F_H1_sign.setText(ATO);
+                           F_H0_sign.setText("=");
+                           F_H1_sign.setText("!=");
                      }
                       F_alpha.setText(Double.toString(alpha));
                         String _ftest= String.format("%5.3f",Ftest);
                       F_Test.setText(_ftest);
               f_df1.setText(Integer.toString(s1.length-1));
               F_df2.setText(Integer.toString(s2.length-1));
-                     
-                  if((v/v1)>=critical_value[7] &&   j1Tailed==true)
+                  
                   {pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
                   String desc= String.format("Since %5.3f   >= %5.3f,we  accept H0",Ftest,critical_value[7]); 
                   String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
@@ -9736,7 +9754,9 @@ Remove(1);
                   }
            
                   
-                  if( (v/v1)<critical_value[7] && j1Tailed==true )
+                  
+                  
+                  if( critical_value[7]<=Ftest  &&  j1Tailed==true)
                   {pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
                   String desc= String.format("Since %5.3f< %5.3f,we  reject H0",Ftest,critical_value[7]); 
                    String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
@@ -9746,15 +9766,16 @@ Remove(1);
                   }
                   
                   
-                if((v/v1)<=critical_value[7] &&   j1Tailed==true)
+                if(Ftest<critical_value[7] &&  j1Tailed==true)
                 {   pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
                   String ans= String.format("Since %5.3f<= %5.3f ,we  accept H0",Ftest,critical_value[7]); 
                  String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
                    F_pvalue.setText(pval2);
                    F_result.setText(ans);
+                    
                 }
-                  
-                if((v/v1)>critical_value[7] &&   j1Tailed==true)
+                 
+                if(Ftest>critical_value[7] &&   j1Tailed==true )
                 {   pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
                   String desc2= String.format("Since %5.3f > %5.3f ,we  reject H0",Ftest,critical_value[7]); 
               F_result.setText(desc2);
@@ -9763,7 +9784,7 @@ Remove(1);
                              
                 
                 
-                  if((critical_value[5] <=(v/v1) )  ||(  critical_value[6] <=(v/v1))  &&   j2tailed==true)
+                  if( j2tailed==true)
                   {
                    
                     pvalue[7]=1-f.cumulativeProbability(critical_value[5]);
@@ -10132,11 +10153,12 @@ Remove(1);
     }//GEN-LAST:event_jALOSCBActionPerformed
 
     private void j2TailedRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j2TailedRadioButtonActionPerformed
-         if(j2TailedRadioButton.isSelected())
+         if(j1TailedRadioButton.isSelected())
          {
-             j1TailedRadioButton.setSelected(false);
+             j1TailedRadioButton.setSelected(true);
              alpha=alpha/2;
-            j2tailed=true;
+            j2tailed=false;
+            j1Tailed=true;        ;
          }
     }//GEN-LAST:event_j2TailedRadioButtonActionPerformed
    
@@ -10144,23 +10166,8 @@ Remove(1);
        
         Object jTestTypeObj =  jTestType.getSelectedItem();
        NullTestOption  = jTestTypeObj.toString();
-        if( NullTestOption.equals(">="))
-        {
-           ATO="<";
-           NullOption=">=";
-        }
-        
-       if(NullTestOption.equals("<="))
-       {
-           ATO= ">";
-           NullOption="<=";
-       }
        
-         if(NullTestOption.equals("=" ))
-         {
-           ATO="<>";      
-           NullOption= "=";
-         } 
+       
       
     }//GEN-LAST:event_jTestTypeActionPerformed
 
