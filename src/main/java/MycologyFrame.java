@@ -6764,7 +6764,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
             }
         });
 
-        jTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "=", ">=", "<=" }));
+        jTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { ">=", "<=", "=" }));
         jTestType.setBorder(javax.swing.BorderFactory.createTitledBorder("Test option"));
         jTestType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -9698,9 +9698,9 @@ Remove(1);
                 H1=jH1EditFeild.getText();
                F_H0.setText(H0);
                F_H1.setText(H1);
-               
+               System.out.println(NullTestOption)
                    
-                  if( NullTestOption ==">=" )
+                  if( NullTestOption ==  ">=" )
                   {   
                          j1Tailed=true;
                           critical_value[7]=f.inverseCumulativeProbability(alpha);
@@ -9713,7 +9713,7 @@ Remove(1);
                   }
                   
                      
-                     if( NullTestOption  == "<=")
+                     if( NullTestOption  ==  "<=")
                      {
                                            
                           j1Tailed=true;
@@ -9726,7 +9726,7 @@ Remove(1);
                      
                    
                        
-                        if( NullTestOption == "=" )
+                        if( NullTestOption ==  "=" )
                         {
                            
                      critical_value[5]=f_LB.inverseCumulativeProbability(alpha/2);
@@ -9738,6 +9738,12 @@ Remove(1);
                          critical_value[7]=critical_value[5];
                            F_H0_sign.setText("=");
                            F_H1_sign.setText("!=");
+                            pvalue[7]=1-f.cumulativeProbability(critical_value[5]);
+                    String desc3= String.format("Since %5.3f  =<F<= %5.3f,we  accept H0",critical_value[5],critical_value[6]); 
+                     String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
+                   F_pvalue.setText(pval2);
+                   F_result.setText(desc3);
+                   
                      }
                       F_alpha.setText(Double.toString(alpha));
                         String _ftest= String.format("%5.3f",Ftest);
@@ -9784,21 +9790,10 @@ Remove(1);
                              
                 
                 
-                  if( j2tailed==true)
-                  {
-                   
-                    pvalue[7]=1-f.cumulativeProbability(critical_value[5]);
-                    String desc3= String.format("Since %5.3f  =<F<= %5.3f,we  accept H0",critical_value[5],critical_value[6]); 
-                     String pval2 = String.format("%5.3f",1-f.cumulativeProbability(critical_value[7]));
-                   F_pvalue.setText(pval2);
-                   F_result.setText(desc3);
-                  }
-                  
+                                 
                
                
-              
-            
-            
+         
            }
      
      
