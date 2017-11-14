@@ -44,21 +44,19 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="MycologyMultiplex" min="-2" pref="759" max="-2" attributes="0"/>
+              <Component id="MycologyMultiplex" pref="771" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel19" min="-2" pref="304" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel19" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <Component id="MycologyMultiplex" min="-2" pref="1011" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="39" max="32767" attributes="0"/>
           </Group>
+          <Component id="jPanel19" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -138,7 +136,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="103" pref="575" max="32767" attributes="0"/>
+                                  <EmptySpace min="103" pref="587" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -155,7 +153,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="145" max="32767" attributes="0"/>
+                          <EmptySpace pref="157" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel80" min="-2" max="-2" attributes="0"/>
                               <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
@@ -1160,7 +1158,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="168" max="32767" attributes="0"/>
+                          <EmptySpace pref="180" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2363,7 +2361,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="726" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="738" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -5756,7 +5754,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -5790,9 +5788,9 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="29" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="StatsWindowPane" min="-2" pref="697" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jPanel32" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       </Group>
@@ -5852,7 +5850,7 @@
                                   <Component id="filler1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="76" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -7365,7 +7363,7 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel133" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -7373,38 +7371,40 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel195" min="-2" pref="31" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="testOpt2" min="-2" pref="19" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel144" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="testOpt2" min="-2" pref="35" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel132" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="HO2Test" min="-2" pref="142" max="-2" attributes="0"/>
+                                                  <Component id="H02Test" min="-2" pref="142" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel186" min="-2" pref="31" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="testOption" min="-2" pref="16" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel188" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="testOption" min="-2" pref="36" max="-2" attributes="0"/>
                                               </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel188" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel144" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                                           <Component id="jLabel141" min="-2" pref="25" max="-2" attributes="0"/>
                                                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                                           <Component id="jLabel136" min="-2" pref="178" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
                                                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                                          <Component id="jDOF2Display" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                          <Component id="jDOF2Display" min="-2" pref="55" max="-2" attributes="0"/>
+                                                          <EmptySpace max="32767" attributes="0"/>
                                                           <Component id="ALOS_tSample" min="-2" pref="104" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -7415,7 +7415,6 @@
                                                           <Component id="jLabel137" min="-2" pref="101" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="twoSampleT" min="-2" pref="114" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="Two_tCritical" min="-2" pref="91" max="-2" attributes="0"/>
@@ -7431,7 +7430,7 @@
                                                   <Component id="jLabel198" min="-2" pref="152" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="pairedTresult" alignment="1" min="-2" pref="339" max="-2" attributes="0"/>
+                                              <Component id="twoSampleTresult" alignment="1" min="-2" pref="339" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
@@ -7451,7 +7450,7 @@
                                           <Component id="twoSampleCrit" min="-2" pref="68" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="61" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -7460,12 +7459,12 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="testOption" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel188" min="-2" pref="28" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="jLabel133" min="-2" pref="33" max="-2" attributes="0"/>
                                               <Component id="testOpt2" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -7482,8 +7481,8 @@
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jLabel127" min="-2" pref="36" max="-2" attributes="0"/>
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="HO2Test" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                                                      <Component id="H02Test" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
@@ -7528,7 +7527,7 @@
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="jLabel198" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="pairedTresult" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="twoSampleTresult" min="-2" pref="43" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -7635,47 +7634,38 @@
                         <Component class="java.awt.TextField" name="ALOS_tSample">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="textField1"/>
                           </Properties>
                         </Component>
                         <Component class="java.awt.TextField" name="H12Test">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="textField2"/>
                           </Properties>
                         </Component>
                         <Component class="java.awt.TextField" name="Two_tCritical">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="textField3"/>
                           </Properties>
                         </Component>
                         <Component class="java.awt.TextField" name="TwoTest_pval">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="textField4"/>
                           </Properties>
                         </Component>
-                        <Component class="java.awt.TextField" name="HO2Test">
+                        <Component class="java.awt.TextField" name="H02Test">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="textField6"/>
                           </Properties>
                         </Component>
                         <Component class="java.awt.TextField" name="twoSampleT">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="textField7"/>
-                          </Properties>
                         </Component>
                         <Component class="java.awt.TextField" name="testOption">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="textField8"/>
+                            <Property name="editable" type="boolean" value="false"/>
                           </Properties>
                         </Component>
                         <Component class="java.awt.TextField" name="testOpt2">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="textField9"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel141">
@@ -7696,7 +7686,7 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="jDOF2Display">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="jTextField1"/>
+                            <Property name="editable" type="boolean" value="false"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel186">
@@ -7786,7 +7776,7 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="pairedTresult">
+                        <Component class="javax.swing.JLabel" name="twoSampleTresult">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jLabel109"/>
                           </Properties>
@@ -8948,7 +8938,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -8983,31 +8973,31 @@
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Component id="size" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                                          <Component id="var_ts" min="-2" pref="76" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Component id="size" min="-2" pref="39" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                                   <Component id="jLabel194" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="varCrit" min="-2" pref="144" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <Component id="jLabel192" min="-2" pref="152" max="-2" attributes="0"/>
                                                           <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="1" attributes="0">
-                                                          <Component id="var_cv" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="var_ts" min="-2" pref="76" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="var_cv" max="32767" attributes="0"/>
                                                           <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="jLabel205" min="-2" pref="68" max="-2" attributes="0"/>
-                                                      <Component id="var_p" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="var_p" min="-2" pref="57" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -9027,16 +9017,16 @@
                                           <Component id="var_alpha_lbl" min="-2" pref="178" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="var_alpha" min="-2" max="-2" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel163" min="-2" pref="101" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                                   <Component id="jLabel164" min="-2" pref="101" max="-2" attributes="0"/>
                                               </Group>
+                                              <Component id="var_alpha" min="-2" pref="64" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="36" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -9204,42 +9194,29 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="size">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="jTextField1"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="var_alpha">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="jTextField2"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="var_ts">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="jTextField3"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="var_cv">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="jTextField4"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="var_p">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="jTextField2"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="var_H0">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="jTextField2"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="var_H1">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="jTextField3"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="statement">
@@ -9368,7 +9345,6 @@
                         <Component class="javax.swing.JTextField" name="var_opt1">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
-                            <Property name="text" type="java.lang.String" value="jTextField4"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -9494,12 +9470,14 @@
                                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                   <Component id="jLabel134" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel147" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel150" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="pairedT_H0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="NullOpt" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel158" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel147" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel150" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="pairedT_H0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel158" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -9998,7 +9976,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel20" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jPanel21" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -10026,7 +10004,7 @@
                   <Component id="jLabel97" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel22" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="178" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -10449,8 +10427,8 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
-                    <StringItem index="0" value="&gt;="/>
-                    <StringItem index="1" value="&lt;="/>
+                    <StringItem index="0" value="&lt;="/>
+                    <StringItem index="1" value="&gt;="/>
                     <StringItem index="2" value="="/>
                   </StringArray>
                 </Property>
