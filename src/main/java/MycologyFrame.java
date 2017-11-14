@@ -5532,7 +5532,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
                                 .addGap(12, 12, 12)
                                 .addComponent(F_crit, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(F_pvalue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(F_pvalue, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(FTestPaneLayout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addGroup(FTestPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -9219,7 +9219,7 @@ Remove(1);
                        }
                   
                        TDistribution t = new TDistribution(df-1);
-                       if( NullOption.equals("="))
+                       if(  jTestType.getSelectedIndex()==2)
                        {
                                testsign.setText("=");
                       H1testsign.setText(" !=");
@@ -9487,13 +9487,13 @@ Remove(1);
          String  c3=String.format(" = %5.3f",critical_value[8]);
          
             NullOption="<=";
-           if( NullOption.equals( "<=" ))
+           if( jTestType.getSelectedIndex() ==0)
           {
                criteria.setText(c1);
                solution.setText(sol1);
           }
            NullOption=">=";
-          if( NullOption.equals (">=")  )
+          if(  jTestType.getSelectedIndex() ==1 )
           {criteria.setText(c2);
            solution.setText(sol2);
            }
@@ -9504,7 +9504,7 @@ Remove(1);
                solution.setText(alt2);
            
        
-           if(j2tailed==true )
+           if( jTestType.getSelectedIndex()==2 )
            {
       
                criteria.setText(c3);
@@ -9680,11 +9680,14 @@ Remove(1);
                 H1=jH1EditFeild.getText();
                F_H0.setText(H0);
                F_H1.setText(H1);
-               
+               String _ftest= String.format("%5.3f",Ftest);
+                F_Test.setText(_ftest);
+              f_df1.setText(Integer.toString(s1.length-1));
+              F_df2.setText(Integer.toString(s2.length-1));
                    
-                  if( NullTestOption ==  ">=" )
+                  if(  jTestType.getSelectedIndex() ==1 )
                   {   
-                         j1Tailed=true;
+                         
                           critical_value[7]=f.inverseCumulativeProbability(alpha);
                          String criteria = String.format("F>=%5.3f",critical_value[7]);
                         F_criteria.setText(criteria);
@@ -9695,27 +9698,29 @@ Remove(1);
                   }
                   
                      
-                     if( NullTestOption  ==  "<=")
+                     if( jTestType.getSelectedIndex() ==0)
                      {
                                            
-                          j1Tailed=true;
+                
                           critical_value[7]=f.inverseCumulativeProbability(1-alpha);
                              String criteria1= String.format("F<=%5.3f",critical_value[7]);
                          F_criteria.setText(criteria1);
                            F_H0_sign.setText("<=");
                            F_H1_sign.setText("<");
+                             String _fcrit =String.format("%5.3f",critical_value[7]);
+                          F_crit.setText(_fcrit);
                      }
                      
                    
                        
-                        if( NullTestOption ==  "=" )
+                        if(  jTestType.getSelectedIndex()==2 )
                         {
                            
                      critical_value[5]=f_LB.inverseCumulativeProbability(alpha/2);
                    critical_value[6]=f_LB.inverseCumulativeProbability(1-(alpha/2));
                     L=(v/v1)*(1.0/critical_value[6]);
                   U=(v/v1)*( 1.0/ critical_value[5]);
-                         String crit3= String.format("%5.3f<=F<=%5.3f",critical_value[6],critical_value[5]);
+                         String crit3= String.format("%5.3f<=F<=%5.3f",critical_value[5],critical_value[6]);
                          F_criteria.setText(crit3);
                          critical_value[7]=critical_value[5];
                            F_H0_sign.setText("=");
@@ -9725,18 +9730,17 @@ Remove(1);
                      String pval2 = String.format("%5.3f",pvalue[7]);
                    F_pvalue.setText(pval2);
                    F_result.setText(desc3);
-                   
-                     }
+                     String _fcrit =String.format("%5.3f",critical_value[7]);
+                          F_crit.setText(_fcrit);
+                     
                       F_alpha.setText(Double.toString(alpha));
-                        String _ftest= String.format("%5.3f",Ftest);
-                      F_Test.setText(_ftest);
-              f_df1.setText(Integer.toString(s1.length-1));
-              F_df2.setText(Integer.toString(s2.length-1));
+                      
+                     
                   
-                  {pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
+                  pvalue[7]=1-f.cumulativeProbability(critical_value[7]);
                   String desc= String.format("Since %5.3f   >= %5.3f,we  accept H0",Ftest,critical_value[7]); 
-                  String pval2 = String.format("%5.3f",pvalue[7]);
-                   F_pvalue.setText(pval2);
+                  String pval3 = String.format("%5.3f",pvalue[7]);
+                   F_pvalue.setText(pval3);
                     F_result.setText(desc);
                      
                   }
@@ -9811,8 +9815,8 @@ Remove(1);
                        num= (n-1)*Stats.getVariance();
                        var= num/Stats.getStandardDeviation(); 
                        
-            NullTestOption="<=";           
-            if( NullTestOption.equals( "<=") )
+                  
+            if(  jTestType.getSelectedIndex() ==0 )
             {
       
            ChiSquaredDistribution chisquared=  new ChiSquaredDistribution(n-1,1-alpha);
@@ -9820,8 +9824,8 @@ Remove(1);
                     pvalue[4]= 1-chisquared.cumulativeProbability(critical_value[4]);
            
            }
-            NullTestOption=">=";
-              if( NullTestOption.equals( ">=")   &&    j2tailed==false )
+            
+              if(  jTestType.getSelectedIndex() ==1 )
             {
          
            ChiSquaredDistribution chisquared=  new ChiSquaredDistribution(n-1,alpha);
@@ -9835,7 +9839,7 @@ Remove(1);
          size.setText(Integer.toString(n));
    
              
-               if( j2tailed == true)
+               if(  jTestType.getSelectedIndex() ==2)
              {
                   NullTestOption="==";
                   ATO="<>";
@@ -9903,7 +9907,7 @@ Remove(1);
         statement.setText(ha_GTthan); 
      
      
-    if(j2tailed==true)
+    if( jTestType.getSelectedIndex() ==2)
     {
     String j2tailstatement = String.format("Since %2.3f <=%2.3f<= %2.3f, we cannot reject the Null Hypothesis",LBcv,var,UBcv);
     statement.setText(j2tailstatement);
@@ -9967,19 +9971,19 @@ Remove(1);
      
  
    
-   if( NullTestOption.equals("=")  )
+   if(  jTestType.getSelectedIndex() ==2  )
    {
        critical_value[3] =2*t.inverseCumulativeProbability(1- (2*alpha/2));
        ATO="!=";
    }
    
-  if( NullTestOption.equals( "<="))
+  if(  jTestType.getSelectedIndex() ==0)
   {
       critical_value[3]= t.inverseCumulativeProbability(1- alpha);
       ATO="<";
   }
  
-   if( NullTestOption.equals(">=")  )
+   if( jTestType.getSelectedIndex() ==1 )
    {
        critical_value[3] = t.inverseCumulativeProbability(alpha);
    ATO=">";
@@ -10419,7 +10423,7 @@ Remove(1);
         {
             ALOS_tSample.setText("   ");
             twoSampleT.setText("   ");
-            HO2Test.setText("   ");
+            H02Test.setText("   ");
             H12Test.setText("    ");
             jDOF2Display.setText("      ");
             pvalue[2]=0.0;

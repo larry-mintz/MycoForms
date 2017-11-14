@@ -7899,7 +7899,7 @@
                                                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                                                   <Component id="F_crit" min="-2" pref="83" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="F_pvalue" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="F_pvalue" min="-2" pref="70" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
