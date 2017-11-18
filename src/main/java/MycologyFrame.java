@@ -6910,7 +6910,11 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
   StatsTable.removeColumn(tcol);
   }
     
+    public  void  Insert( int  col_index)
+    {
+    StatsTable.moveColumn(StatsTable.getColumnCount()-1,col_index);
     
+    }
     
 
 public  void   simplelogger(Exception  e)
@@ -6963,14 +6967,10 @@ Remove(4);
   }
  if(t_Test==true   || one_sample==true ||wilcoxan)
  {
- Remove(6);    
+ 
 Remove(2);
 Remove(2);
 Remove(1);
-
-
-
-
  
  }
  
@@ -6989,13 +6989,15 @@ Remove(1);
 
    protected  void clear_table()
    {
-      for(int i = 0; i<10;++i)
-   {StatsTable.setValueAt(0.0, i,3);
-     StatsTable.setValueAt(0, i,2);
-     StatsTable.setValueAt(0, i,4);
-     StatsTable.setValueAt(0, i,5);
-     StatsTable.setValueAt(0, i,6);
-   }  
+       
+  
+       
+          Insert(1);
+          
+          
+      
+       
+           
    }     
            
          
@@ -9228,7 +9230,7 @@ Remove(1);
                        
                        
                        
-                          if(NullTestOption.equals("<= "))
+                          if( jTestType.getSelectedIndex()==0)
                           {
                               critical_value[1]=t.inverseCumulativeProbability(1- alpha);
                                             
@@ -9237,7 +9239,7 @@ Remove(1);
                           }
                           
                           
-                           if( NullTestOption.equals(">=") )
+                           if(  jTestType.getSelectedIndex()==1)
                            {
                                    testsign.setText(">=");
                       H1testsign.setText(">");
@@ -10294,7 +10296,7 @@ Remove(1);
 
                 pw.close();
             }catch(IOException  ioe){
-                System.out.println("Error  occured:");
+     
                 ioe.printStackTrace();
             }
         }
@@ -10388,7 +10390,9 @@ Remove(1);
         jH1EditFeild.setText( "   ");
         col1.setText("   ");
         col2.setText("   ");
-        clear_table();
+        
+                 
+
 
         if(ChiSquarePane.isShowing() &&  chi_squared)
         {
@@ -10417,7 +10421,8 @@ Remove(1);
             pvalue[1]=0.0;
             testsign.setText("    ");
             H1testsign.setText("    ");
-
+           StatsTable.repaint();
+           
         }
         if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
         {
