@@ -6910,9 +6910,13 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
   StatsTable.removeColumn(tcol);
   }
     
-    public  void  Insert( int  col_index)
+    public  void  Insert(int   Start, int  End)
     {
-    StatsTable.moveColumn(StatsTable.getColumnCount()-1,col_index);
+    for(int i=Start;i<End;i++)
+            {    
+           TableColumn  c =  new  TableColumn(i);
+       StatsTable.getColumnModel().addColumn(c);
+            }
     
     }
     
@@ -6992,7 +6996,7 @@ Remove(1);
        
   
        
-          Insert(1);
+        
           
           
       
@@ -10421,8 +10425,8 @@ Remove(1);
             pvalue[1]=0.0;
             testsign.setText("    ");
             H1testsign.setText("    ");
-           StatsTable.repaint();
-           
+           Insert(1,6);
+            
         }
         if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
         {
@@ -10434,6 +10438,7 @@ Remove(1);
             pvalue[2]=0.0;
             critical_value[2]=0.0;
             TwoTest_pval.setText("    ");
+              Insert(2,6);
         }
 
         if(Paired_tTestPanel.isShowing()   &&  paired_t)
@@ -10447,6 +10452,7 @@ Remove(1);
             pvalue[3]=0.0;
             critical_value[3]=0.0;
             pairedT_pval.setText("      ");
+               Insert(2,6);
         }
 
         if(FTestPane.isShowing() && Ftest  )
@@ -10460,6 +10466,7 @@ Remove(1);
             critical_value[7]=0.0;
             critical_value[6]=0.0;
             critical_value[5]=0.0;
+               Insert(2,6);
         }
     }//GEN-LAST:event_jClearResultsActionPerformed
 
