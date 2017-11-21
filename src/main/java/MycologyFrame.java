@@ -6916,6 +6916,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
             {    
            TableColumn  c =  new  TableColumn(i);
        StatsTable.getColumnModel().addColumn(c);
+       StatsTable.getColumnModel().getColumn(i).setHeaderValue("obs ");
             }
     
     }
@@ -10425,7 +10426,10 @@ Remove(1);
             pvalue[1]=0.0;
             testsign.setText("    ");
             H1testsign.setText("    ");
-           Insert(1,6);
+        
+             
+                   
+          Insert(1,6);
             
         }
         if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
