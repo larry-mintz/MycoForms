@@ -6912,10 +6912,14 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
     
     public  void  Insert(int   Start, int  End)
     {
+        
+       TableColumn  c =  new  TableColumn(1);
+       StatsTable.getColumnModel().addColumn(c);
+       StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
     for(int i=Start;i<End;i++)
             {    
-           TableColumn  c =  new  TableColumn(i);
-       StatsTable.getColumnModel().addColumn(c);
+       TableColumn  d=  new  TableColumn(i);
+       StatsTable.getColumnModel().addColumn(d);
        StatsTable.getColumnModel().getColumn(i).setHeaderValue("obs ");
             }
     
@@ -10426,10 +10430,8 @@ Remove(1);
             pvalue[1]=0.0;
             testsign.setText("    ");
             H1testsign.setText("    ");
-            TableColumn  c =  new  TableColumn(1);
-       StatsTable.getColumnModel().addColumn(c);
-       StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
-                   
+       
+                
       Insert(2,6);
             
         }
