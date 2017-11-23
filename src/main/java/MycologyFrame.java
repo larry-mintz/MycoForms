@@ -10426,10 +10426,11 @@ Remove(1);
             pvalue[1]=0.0;
             testsign.setText("    ");
             H1testsign.setText("    ");
-        
-             
+            TableColumn  c =  new  TableColumn(1);
+       StatsTable.getColumnModel().addColumn(c);
+       StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
                    
-          Insert(1,6);
+      Insert(2,6);
             
         }
         if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
