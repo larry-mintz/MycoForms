@@ -6922,16 +6922,19 @@ for(int i=0;i<10;i++)
     
     public  void  Insert(int   Start, int  End)
     {
-        
-       TableColumn  c =  new  TableColumn(1);
+        if (chi_squared==false ||Gtest==false)
+        {
+        TableColumn  c =  new  TableColumn(1);
        StatsTable.getColumnModel().addColumn(c);
        StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
-    for(int i=Start;i<End;i++)
-            {    
+        }
+        
+      for(int i=Start;i<End;i++)
+      {    
        TableColumn  d =  new  TableColumn(i);
        StatsTable.getColumnModel().addColumn(d);
        StatsTable.getColumnModel().getColumn(i).setHeaderValue("obs ");
-            }
+       }
     
     }
     
