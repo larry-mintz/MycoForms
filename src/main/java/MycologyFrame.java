@@ -6902,7 +6902,17 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+protected  void Initialize_Table()
+{
+for(int i=0;i<10;i++)
+  {
+    StatsTable.setValueAt(0.0,i,3);
+     StatsTable.setValueAt(0.0,i,2);
+     StatsTable.setValueAt(0.0,i,4);
+     StatsTable.setValueAt(0.0,i,5);
+      StatsTable.setValueAt(0.0,i,6);
+   }
+}
     
     
   public void Remove( int col_index){
@@ -6912,10 +6922,14 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
     
     public  void  Insert(int   Start, int  End)
     {
+        
+       TableColumn  c =  new  TableColumn(1);
+       StatsTable.getColumnModel().addColumn(c);
+       StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
     for(int i=Start;i<End;i++)
             {    
-           TableColumn  c =  new  TableColumn(i);
-       StatsTable.getColumnModel().addColumn(c);
+       TableColumn  d =  new  TableColumn(i);
+       StatsTable.getColumnModel().addColumn(d);
        StatsTable.getColumnModel().getColumn(i).setHeaderValue("obs ");
             }
     
@@ -10426,11 +10440,9 @@ Remove(1);
             pvalue[1]=0.0;
             testsign.setText("    ");
             H1testsign.setText("    ");
-            TableColumn  c =  new  TableColumn(1);
-       StatsTable.getColumnModel().addColumn(c);
-       StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
-                   
+     
       Insert(2,6);
+      Initialize_Table();
             
         }
         if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
@@ -10444,6 +10456,7 @@ Remove(1);
             critical_value[2]=0.0;
             TwoTest_pval.setText("    ");
               Insert(2,6);
+                  Initialize_Table();
         }
 
         if(Paired_tTestPanel.isShowing()   &&  paired_t)
@@ -10458,6 +10471,7 @@ Remove(1);
             critical_value[3]=0.0;
             pairedT_pval.setText("      ");
                Insert(2,6);
+              Initialize_Table();
         }
 
         if(FTestPane.isShowing() && Ftest  )
@@ -10472,6 +10486,7 @@ Remove(1);
             critical_value[6]=0.0;
             critical_value[5]=0.0;
                Insert(2,6);
+                Initialize_Table();
         }
     }//GEN-LAST:event_jClearResultsActionPerformed
 
