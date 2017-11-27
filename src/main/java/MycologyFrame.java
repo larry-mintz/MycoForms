@@ -10422,8 +10422,10 @@ Remove(1);
             critical_value[0]=0.0;
             jChiValueDisplay.setText( "    ");
             jCriticalDisplay.setText("    ");
-
+            Insert(4,6);
+                  Initialize_Table();
         }
+        
 
         if(GtestPane.isShowing() &&  Gtest)
         {
@@ -10432,6 +10434,8 @@ Remove(1);
             Gtestval.setText("  ");
             G_alpha.setText("   ");
             alpha=0.0;
+             Insert(4,6);
+                  Initialize_Table();
         }
 
         if(tTestPane.isShowing()   &&  t_Test)
