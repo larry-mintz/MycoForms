@@ -6902,17 +6902,7 @@ jCoralFungusPhotoNoEdFeild.addKeyListener(new   KeyAdapter()
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-protected  void Initialize_Table()
-{
-for(int i=0;i<10;i++)
-  {
-    StatsTable.setValueAt(0.0,i,3);
-     StatsTable.setValueAt(0.0,i,2);
-     StatsTable.setValueAt(0.0,i,4);
-     StatsTable.setValueAt(0.0,i,5);
-      StatsTable.setValueAt(0.0,i,6);
-   }
-}
+
     
     
   public void Remove( int col_index){
@@ -6922,20 +6912,19 @@ for(int i=0;i<10;i++)
     
     public  void  Insert(int   Start, int  End)
     {
-        if (chi_squared==false ||Gtest==false)
-        {
-        TableColumn  c =  new  TableColumn(1);
+        
+       TableColumn  c =  new  TableColumn(1);
        StatsTable.getColumnModel().addColumn(c);
        StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
-        }
-        
-      for(int i=Start;i<End;i++)
-      {    
-       TableColumn  d =  new  TableColumn(i);
+    for(int i=Start;i<End;i++)
+            {    
+       TableColumn  d=  new  TableColumn(i);
        StatsTable.getColumnModel().addColumn(d);
        StatsTable.getColumnModel().getColumn(i).setHeaderValue("obs ");
-       }
+            }
     
+    for(int i=Start;i<StatsTable.getColumnCount();i++)
+    StatsTable.getColumnModel().getColumn(i).setHeaderValue("obs ");
     }
     
 
@@ -10422,10 +10411,8 @@ Remove(1);
             critical_value[0]=0.0;
             jChiValueDisplay.setText( "    ");
             jCriticalDisplay.setText("    ");
-            Insert(4,6);
-                  Initialize_Table();
+
         }
-        
 
         if(GtestPane.isShowing() &&  Gtest)
         {
@@ -10434,8 +10421,6 @@ Remove(1);
             Gtestval.setText("  ");
             G_alpha.setText("   ");
             alpha=0.0;
-             Insert(4,6);
-                  Initialize_Table();
         }
 
         if(tTestPane.isShowing()   &&  t_Test)
@@ -10447,9 +10432,11 @@ Remove(1);
             pvalue[1]=0.0;
             testsign.setText("    ");
             H1testsign.setText("    ");
-     
+            //TableColumn  c =  new  TableColumn(1);
+       //StatsTable.getColumnModel().addColumn(c);
+       //StatsTable.getColumnModel().getColumn(1).setHeaderValue("Treatment");
+                   
       Insert(2,6);
-      Initialize_Table();
             
         }
         if(TwoSampletTestPane.isShowing()   &&  TwoSampleT)
@@ -10462,8 +10449,7 @@ Remove(1);
             pvalue[2]=0.0;
             critical_value[2]=0.0;
             TwoTest_pval.setText("    ");
-              Insert(2,6);
-                  Initialize_Table();
+              Insert(2,5);
         }
 
         if(Paired_tTestPanel.isShowing()   &&  paired_t)
@@ -10477,8 +10463,7 @@ Remove(1);
             pvalue[3]=0.0;
             critical_value[3]=0.0;
             pairedT_pval.setText("      ");
-               Insert(2,6);
-              Initialize_Table();
+               Insert(2,5);
         }
 
         if(FTestPane.isShowing() && Ftest  )
@@ -10492,8 +10477,7 @@ Remove(1);
             critical_value[7]=0.0;
             critical_value[6]=0.0;
             critical_value[5]=0.0;
-               Insert(2,6);
-                Initialize_Table();
+               Insert(2,5);
         }
     }//GEN-LAST:event_jClearResultsActionPerformed
 
