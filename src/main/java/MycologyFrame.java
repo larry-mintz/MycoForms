@@ -1,9 +1,17 @@
- import   org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
+
+
+
+
 import   org.apache.commons.math3.stat.descriptive.SummaryStatistics;
+
+
 import org.apache.commons.math3.distribution.ChiSquaredDistribution;
+
+import org.apache.commons.math3.stat.inference.MannWhitneyUTest;
 import org.apache.commons.math3.distribution.TDistribution;
  import org.apache.commons.math3.distribution.FDistribution;
  import  java.util.Arrays;
+  import java.lang.Object;
  import javax.swing.table.*;
 import com.sun.glass.events.KeyEvent;
 import javax.swing.JOptionPane;            
@@ -14,7 +22,7 @@ import java.io.File;
 import  java.io.BufferedWriter;
 import  java.io.IOException;
 import java.io.PrintWriter;
-import  java.lang.*;
+
 import java.util.Scanner;
 import java.awt.*;
 import java.awt.event.*;
@@ -9784,8 +9792,7 @@ Remove(1);
           
     observed= Arrays.copyOf(g1,df-1);
     expected  =Arrays.copyOf(g2,df-1);
-         System.out.println(Arrays.toString(observed));
-         System.out.println(Arrays.toString(expected));
+        
          if(observed.length==expected.length)
          {
          pvalue[8]=TestUtils.gTest(expected, observed);
@@ -9882,11 +9889,14 @@ Remove(1);
      }
     }
       }catch(Exception e)   {simplelogger(e);}
-  
-            
+
+       
+          xdata= Arrays.copyOf(x,xcount) ;
+           ydata  = Arrays.copyOf(y,ycount);
         
-          
-               
+           MannWhitneyUTest  MW= new MannWhitneyUTest();
+           MW.mannWhitneyU(xdata,ydata);
+           MW.mannWhitneyUTest(xdata,ydata);
     }     
     
     
