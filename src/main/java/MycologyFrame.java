@@ -3,11 +3,11 @@ import   org.apache.commons.math3.stat.descriptive.SummaryStatistics;
 import org.apache.commons.math3.distribution.ChiSquaredDistribution;
 import org.apache.commons.math3.stat.inference.MannWhitneyUTest;
 import org.apache.commons.math3.stat.ranking.NaNStrategy;
+import org.apache.commons.math3.stat.ranking.NaturalRanking;
 import org.apache.commons.math3.stat.ranking.TiesStrategy;
 import org.apache.commons.math3.distribution.TDistribution;
  import org.apache.commons.math3.distribution.FDistribution;
  import  java.util.Arrays;
-  import java.lang.Object;
  import javax.swing.table.*;
 import com.sun.glass.events.KeyEvent;
 import javax.swing.JOptionPane;            
@@ -18,7 +18,7 @@ import java.io.File;
 import  java.io.BufferedWriter;
 import  java.io.IOException;
 import java.io.PrintWriter;
-
+import  java.lang.*;
 import java.util.Scanner;
 import java.awt.*;
 import java.awt.event.*;
@@ -28,8 +28,6 @@ import javax.swing.*;
 
  
 import org.apache.commons.math3.stat.inference.TestUtils;
-import org.apache.commons.math3.stat.ranking.NaNStrategy;
-import org.apache.commons.math3.stat.ranking.TiesStrategy;
 
 
  /* To change this license header, choose License Headers in Project Properties.
@@ -9790,7 +9788,8 @@ Remove(1);
           
     observed= Arrays.copyOf(g1,df-1);
     expected  =Arrays.copyOf(g2,df-1);
-        
+         System.out.println(Arrays.toString(observed));
+         System.out.println(Arrays.toString(expected));
          if(observed.length==expected.length)
          {
          pvalue[8]=TestUtils.gTest(expected, observed);
@@ -9873,7 +9872,7 @@ Remove(1);
                int   xcount=0,ycount=0;
                   double   xdata[]= new  double[1000];
                   double  ydata[]= new  double[1000];
-                
+                  double MW_testValue;      
             try{
        for(int i=0;  i<=10;++i)
     {if (StatsTable.getValueAt(i,0) != null)
@@ -9887,14 +9886,13 @@ Remove(1);
      }
     }
       }catch(Exception e)   {simplelogger(e);}
-
-       
-          xdata= Arrays.copyOf(x,xcount) ;
-           ydata  = Arrays.copyOf(y,ycount);
-        
-           MannWhitneyUTest  MW= new MannWhitneyUTest( NaNStrategy.MINIMAL,  TiesStrategy.SEQUENTIAL  );
-           MW.mannWhitneyU(xdata,ydata);
-           MW.mannWhitneyUTest(xdata,ydata);
+  
+            xdata=Arrays.copyOf(x,xcount);
+            ydata=Arrays.copyOf(y,ycount);
+            MannWhitneyUTest MW=new  MannWhitneyUTest(NaNStrategy.MINIMAL,TiesStrategy.SEQUENTIAL);
+          
+         MW_testValue =  MW.mannWhitneyU(xdata, ydata);
+          pvalue[11]= MW.mannWhitneyUTest(xdata, ydata);
     }     
     
     
@@ -9902,7 +9900,7 @@ Remove(1);
            {
              double  R,S,W,test ;
              int n=1;
-             
+        
           double [] rank = new double [10];
         
      
@@ -9954,11 +9952,17 @@ Remove(1);
      //JOptionPane.showMessageDialog(null,"Input error: see err.log  for more info.");
      }
     
+    
+    
         R=m*(n+1)/2;
         Kendal_cv.setText(ans);
          SummaryStatistics  KendalW = new SummaryStatistics();
                        for (int i = 0; i < rank.length; i++) 
-                       {KendalW.addValue(rank[i]);}
+                       {
+                       KendalW.addValue(rank[i]);                
+           }   
+                       
+                       
                        
            S=KendalW.getSumsq();            
              W=12*S/(Math.pow(m,2)*(Math.pow(n,3)-n));
